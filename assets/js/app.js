@@ -27,6 +27,9 @@ const i18n = {
     stat_fodder_label: "dry-fodder halls",
     stat_trees_value: "~{trees}",
     stat_trees_label: "shade-giving trees",
+    stat_cost_value: "₹1.05L",
+    stat_cost_label: "daily running cost",
+    fact_borewell: "{borewells} borewells + {dharam_kanta} dharam-kanta (weighbridge)",
     fact_borewell: "{borewells} borewells + {dharam_kanta} dharam-kanta (weighbridge)",
     hero_intro: "Welcome to Shri Jivdaya Gaushala, Bhinmal — Rajasthan’s sanctuary of compassion for over 80 years. As the first Gaushala of Jalore district, we care for 2,150+ animals across expansive shelters and green spaces—with medical care, nutritious feed and dignity for every life.",
     hero_cta_donate: "Donate Now",
@@ -120,6 +123,7 @@ const i18n = {
     role_secretary: "Secretary",
     role_treasurer: "Treasurer",
     role_joint_secretary: "Joint Secretary"
+
     footer_social: "Connect"
   },
   hi: {
@@ -150,6 +154,8 @@ const i18n = {
     stat_fodder_label: "सूखा चारा हॉल",
     stat_trees_value: "~{trees}",
     stat_trees_label: "छायादार वृक्ष",
+    stat_cost_value: "₹1.05लाख",
+    stat_cost_label: "दैनिक व्यय",
     fact_borewell: "{borewells} बोरवेल + {dharam_kanta} धर्मकांटा",
     fact_trees_goal: "लक्ष्य: +{trees_goal_per_year} वृक्ष/वर्ष",
     fact_trees_planted: "~{trees_planted_2024_2025} वृक्ष 2024–25 में लगाए",
@@ -161,7 +167,6 @@ const i18n = {
     about_panch: "पांच कुआ गौशाला: ~180 बीघा",
     about_residents: "कुल निवासी: ~2,150 पशु।",
     about_facilities: "सुविधाएँ: वार्ड, अस्पताल, चारा हॉल, स्टाफ क्वार्टर, संत निवास, पक्षीघर व चबूतरा, जल ढांचा।",
-=======
     hero_intro: "श्री जीवदया गौशाला, भीनमाल में आपका स्वागत है — करुणा की यह शरणस्थली पिछले 80 वर्षों से अबोल प्राणियों की सेवा कर रही है। जालौर जिले की प्रथम गौशाला के रूप में, हम 2,150+ पशुओं की प्रेम व सम्मान से देखभाल करते हैं।",
     hero_cta_donate: "अभी दान करें",
     hero_cta_visit: "भेंट/सेवा करें",
@@ -373,6 +378,8 @@ function copy(sel){
   if(!el) return;
   const text = el.textContent.trim();
   navigator.clipboard.writeText(text).then(()=>{
+    toast(i18n[currentLang].copied);
+  });
     showToast(i18n[currentLang].copied);
   });
   if (e.target.classList.contains('lang-toggle')){
@@ -402,6 +409,7 @@ function setupForms(){
         arr.push({date:new Date().toISOString(), data});
         localStorage.setItem(storeKey, JSON.stringify(arr));
         const msgKey = id === 'donation-form' ? 'donate_success' : id === 'volunteer-form' ? 'volunteer_success' : 'contact_success';
+        toast(i18n[currentLang][msgKey]);
         let msgKey = id === 'donation-form' ? 'donate_success' : id === 'volunteer-form' ? 'volunteer_success':'contact_success';
         showToast(i18n[currentLang][msgKey]);
         form.reset();
@@ -410,6 +418,7 @@ function setupForms(){
   });
 }
 
+function toast(msg){
 function showToast(msg){
   let t = document.querySelector('.toast');
   if(!t){
