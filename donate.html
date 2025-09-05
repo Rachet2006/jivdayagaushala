@@ -1,0 +1,132 @@
+<!-- TODO: Replace placeholders (visiting hours, compliance docs, exact map link) after NGO confirmation. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Donate – Shri Jivdaya Gaushala, Bhinmal</title>
+  <meta name="description" content="Support over 2,000 animals with your donation.">
+  <meta property="og:title" content="Donate – Shri Jivdaya Gaushala, Bhinmal">
+  <meta property="og:description" content="Support over 2,000 animals with your donation.">
+  <meta property="og:image" content="assets/img/hero-placeholder.svg">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<header id="site-header"></header>
+<main id="main-content">
+  <h1 data-i18n="donate_title"></h1>
+  <p data-i18n="donate_intro"></p>
+  <div class="banner" data-i18n="donate_disclaimer"></div>
+  <h2 data-i18n="donate_options"></h2>
+  <ul>
+    <li data-i18n="donate_one_time"></li>
+    <li data-i18n="donate_monthly"></li>
+    <li data-i18n="donate_sponsor"></li>
+    <li data-i18n="donate_feed"></li>
+    <li data-i18n="donate_medical"></li>
+    <li data-i18n="donate_tree"></li>
+  </ul>
+  <h2 data-i18n="donate_bank"></h2>
+  <div class="bank-details">
+    <div class="details-box">
+      <p><strong>State Bank of India – Bhinmal</strong></p>
+      <p>A/c Name: Shri Jivdaya Gaushala Bhinmal</p>
+      <p>S/B A/C: 30394883991</p>
+      <p>IFSC: SBIN0011307</p>
+      <button class="copy-btn" data-copy="State Bank of India – Bhinmal\nA/c Name: Shri Jivdaya Gaushala Bhinmal\nS/B A/C: 30394883991\nIFSC: SBIN0011307">Copy</button>
+    </div>
+    <div class="details-box">
+      <p><strong>Union Bank of India – Bhinmal</strong></p>
+      <p>A/c Name: Shri Jivdaya Gaushala Bhinmal</p>
+      <p>Current A/C: 749201010050035</p>
+      <p>IFSC: UBIN0574929</p>
+      <button class="copy-btn" data-copy="Union Bank of India – Bhinmal\nA/c Name: Shri Jivdaya Gaushala Bhinmal\nCurrent A/C: 749201010050035\nIFSC: UBIN0574929">Copy</button>
+    </div>
+  </div>
+  <h2 data-i18n="donate_form_title"></h2>
+  <form id="donation-form">
+    <div class="form-group">
+      <label for="d-name" data-i18n="donate_name"></label>
+      <input id="d-name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="d-email" data-i18n="donate_email"></label>
+      <input id="d-email" type="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="d-phone" data-i18n="donate_phone"></label>
+      <input id="d-phone" name="phone" required>
+    </div>
+    <div class="form-group">
+      <label for="d-address" data-i18n="donate_address"></label>
+      <textarea id="d-address" name="address" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="d-pan" data-i18n="donate_pan"></label>
+      <input id="d-pan" name="pan">
+    </div>
+    <div class="form-group">
+      <label for="d-amount" data-i18n="donate_amount"></label>
+      <input id="d-amount" name="amount" type="number" required>
+    </div>
+    <div class="form-group">
+      <label for="d-purpose" data-i18n="donate_purpose"></label>
+      <select id="d-purpose" name="purpose">
+        <option data-i18n="donate_one_time"></option>
+        <option data-i18n="donate_monthly"></option>
+        <option data-i18n="donate_sponsor"></option>
+        <option data-i18n="donate_feed"></option>
+        <option data-i18n="donate_medical"></option>
+        <option data-i18n="donate_tree"></option>
+      </select>
+    </div>
+    <button type="submit" class="btn-primary" data-i18n="donate_submit"></button>
+  </form>
+  <section class="faq">
+    <h2 data-i18n="faq_title"></h2>
+    <div class="accordion-item">
+      <button class="accordion-button" data-i18n="faq_how"></button>
+      <div class="accordion-content" data-i18n="faq_how_ans"></div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-button" data-i18n="faq_receipt"></button>
+      <div class="accordion-content" data-i18n="faq_receipt_ans"></div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-button" data-i18n="faq_refund"></button>
+      <div class="accordion-content" data-i18n="faq_refund_ans"></div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-button" data-i18n="faq_docs"></button>
+      <div class="accordion-content" data-i18n="faq_docs_ans"></div>
+    </div>
+  </section>
+</main>
+<footer id="site-footer"></footer>
+<script src="assets/js/app.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DonateAction",
+  "name": "Donate to Shri Jivdaya Gaushala",
+  "target": "https://example.org/donate.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  "name": "Shri Jivdaya Gaushala, Bhinmal",
+  "url": "https://example.org",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bhinmal",
+    "addressRegion": "Rajasthan",
+    "addressCountry": "IN"
+  }
+}
+</script>
+</body>
+</html>
