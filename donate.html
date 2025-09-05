@@ -1,0 +1,135 @@
+<!-- TODO: Replace placeholders (visiting hours, compliance docs, exact map link) after NGO confirmation. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Donate – Shri Jivdaya Gaushala, Bhinmal</title>
+  <meta name="description" content="Support over 2,000 animals with your donation.">
+  <meta property="og:title" content="Donate – Shri Jivdaya Gaushala, Bhinmal">
+  <meta property="og:description" content="Support over 2,000 animals with your donation.">
+  <meta property="og:image" content="assets/img/hero-placeholder.svg">
+  <meta property="og:type" content="website">
+  <link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/notosansdevanagari/v1/NotoSansDevanagari-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<header id="site-header" class="header"></header>
+<main id="main-content">
+  <section class="section container">
+    <h1 data-i18n="donate_title"></h1>
+    <p data-i18n="donate_intro"></p>
+    <h2 data-i18n="donate_options"></h2>
+    <ul class="grid grid-3">
+      <li class="card" data-i18n="donate_one_time"></li>
+      <li class="card" data-i18n="donate_monthly"></li>
+      <li class="card" data-i18n="donate_sponsor"></li>
+      <li class="card" data-i18n="donate_feed"></li>
+      <li class="card" data-i18n="donate_medical"></li>
+      <li class="card" data-i18n="donate_tree"></li>
+    </ul>
+    <h2 data-i18n="donate_bank"></h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>State Bank of India – Bhinmal</h3>
+        <p>A/c Name: Shri Jivdaya Gaushala Bhinmal</p>
+        <p>Account No: <span id="sbi-ac">30394883991</span> <button class="btn btn-outline small" onclick="copy('#sbi-ac')" data-i18n="copy"></button></p>
+        <p>IFSC: <span id="sbi-ifsc">SBIN0011307</span> <button class="btn btn-outline small" onclick="copy('#sbi-ifsc')" data-i18n="copy"></button></p>
+      </div>
+      <div class="card">
+        <h3>Union Bank of India – Bhinmal</h3>
+        <p>A/c Name: Shri Jivdaya Gaushala Bhinmal</p>
+        <p>Account No: <span id="ubi-ac">749201010050035</span> <button class="btn btn-outline small" onclick="copy('#ubi-ac')" data-i18n="copy"></button></p>
+        <p>IFSC: <span id="ubi-ifsc">UBIN0574929</span> <button class="btn btn-outline small" onclick="copy('#ubi-ifsc')" data-i18n="copy"></button></p>
+      </div>
+    </div>
+    <div class="banner" data-i18n="donate_disclaimer"></div>
+    <h2 data-i18n="donate_form_title"></h2>
+    <form id="donation-form" class="form">
+      <div class="input">
+        <label for="d-name" data-i18n="donate_name"></label>
+        <input id="d-name" name="name" required>
+      </div>
+      <div class="input">
+        <label for="d-email" data-i18n="donate_email"></label>
+        <input id="d-email" type="email" name="email" required>
+      </div>
+      <div class="input">
+        <label for="d-phone" data-i18n="donate_phone"></label>
+        <input id="d-phone" name="phone" required>
+      </div>
+      <div class="input">
+        <label for="d-address" data-i18n="donate_address"></label>
+        <textarea id="d-address" name="address" required></textarea>
+      </div>
+      <div class="input">
+        <label for="d-pan" data-i18n="donate_pan"></label>
+        <input id="d-pan" name="pan">
+      </div>
+      <div class="input">
+        <label for="d-amount" data-i18n="donate_amount"></label>
+        <input id="d-amount" name="amount" type="number" required>
+      </div>
+      <div class="input">
+        <label for="d-purpose" data-i18n="donate_purpose"></label>
+        <select id="d-purpose" name="purpose">
+          <option data-i18n="donate_one_time"></option>
+          <option data-i18n="donate_monthly"></option>
+          <option data-i18n="donate_sponsor"></option>
+          <option data-i18n="donate_feed"></option>
+          <option data-i18n="donate_medical"></option>
+          <option data-i18n="donate_tree"></option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary" data-i18n="donate_submit"></button>
+    </form>
+    <div class="accordion">
+      <h2 data-i18n="faq_title"></h2>
+      <details>
+        <summary data-i18n="faq_how"></summary>
+        <p data-i18n="faq_how_ans"></p>
+      </details>
+      <details>
+        <summary data-i18n="faq_receipt"></summary>
+        <p data-i18n="faq_receipt_ans"></p>
+      </details>
+      <details>
+        <summary data-i18n="faq_refund"></summary>
+        <p data-i18n="faq_refund_ans"></p>
+      </details>
+      <details>
+        <summary data-i18n="faq_docs"></summary>
+        <p data-i18n="faq_docs_ans"></p>
+      </details>
+    </div>
+  </section>
+</main>
+<footer id="site-footer"></footer>
+<script src="assets/js/app.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DonateAction",
+  "name": "Donate to Shri Jivdaya Gaushala",
+  "target": "https://example.org/donate.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  "name": "Shri Jivdaya Gaushala, Bhinmal",
+  "url": "https://example.org",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bhinmal",
+    "addressRegion": "Rajasthan",
+    "addressCountry": "IN"
+  }
+}
+</script>
+</body>
+</html>
