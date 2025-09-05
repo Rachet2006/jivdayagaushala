@@ -28,6 +28,17 @@ const i18n = {
     stat_trees_value: "~{trees}",
     stat_trees_label: "shade-giving trees",
     fact_borewell: "{borewells} borewells + {dharam_kanta} dharam-kanta (weighbridge)",
+    hero_intro: "Welcome to Shri Jivdaya Gaushala, Bhinmal — Rajasthan’s sanctuary of compassion for over 80 years. As the first Gaushala of Jalore district, we care for 2,150+ animals across expansive shelters and green spaces—with medical care, nutritious feed and dignity for every life.",
+    hero_cta_donate: "Donate Now",
+    hero_cta_visit: "Visit/Volunteer",
+    fastfacts_title: "Fast Facts",
+    fact_years: "80+ years of service",
+    fact_animals: "~{animals_total} animals (cows, bulls, goats, sheep, buffaloes, mares)",
+    fact_wards: "{wards} animal wards",
+    fact_hospital: "{hospital} animal hospital",
+    fact_fodder: "{fodder_halls} dry-fodder halls",
+    fact_borewell: "{borewells} borewells + {dharam_kanta} dharam-kanta (weighbridge)",
+    fact_trees: "~{trees} shade-giving trees (neem, khejri, sisam)",
     fact_trees_goal: "Goal: +{trees_goal_per_year} trees/year",
     fact_trees_planted: "~{trees_planted_2024_2025} planted in 2024–25",
     fact_feeding: "Daily feeding: dry fodder + 1–2 truckloads of green fodder; lapsi on auspicious days",
@@ -109,6 +120,7 @@ const i18n = {
     role_secretary: "Secretary",
     role_treasurer: "Treasurer",
     role_joint_secretary: "Joint Secretary"
+    footer_social: "Connect"
   },
   hi: {
     nav_home: "होम",
@@ -149,6 +161,28 @@ const i18n = {
     about_panch: "पांच कुआ गौशाला: ~180 बीघा",
     about_residents: "कुल निवासी: ~2,150 पशु।",
     about_facilities: "सुविधाएँ: वार्ड, अस्पताल, चारा हॉल, स्टाफ क्वार्टर, संत निवास, पक्षीघर व चबूतरा, जल ढांचा।",
+=======
+    hero_intro: "श्री जीवदया गौशाला, भीनमाल में आपका स्वागत है — करुणा की यह शरणस्थली पिछले 80 वर्षों से अबोल प्राणियों की सेवा कर रही है। जालौर जिले की प्रथम गौशाला के रूप में, हम 2,150+ पशुओं की प्रेम व सम्मान से देखभाल करते हैं।",
+    hero_cta_donate: "अभी दान करें",
+    hero_cta_visit: "भेंट/सेवा करें",
+    fastfacts_title: "त्वरित तथ्य",
+    fact_years: "80+ वर्षों की सेवा",
+    fact_animals: "~{animals_total} पशु (गाय, बैल, बकरी, भेड़, भैंस, घोड़ी)",
+    fact_wards: "{wards} पशु वार्ड",
+    fact_hospital: "{hospital} पशु अस्पताल",
+    fact_fodder: "{fodder_halls} सूखा चारा हॉल",
+    fact_borewell: "{borewells} बोरवेल + {dharam_kanta} धर्मकांटा",
+    fact_trees: "~{trees} छायादार वृक्ष (नीम, खेजड़ी, सिसम)",
+    fact_trees_goal: "लक्ष्य: +{trees_goal_per_year} वृक्ष/वर्ष",
+    fact_trees_planted: "~{trees_planted_2024_2025} वृक्ष 2024–25 में",
+    fact_feeding: "दैनिक भोजन: सूखा चारा + 1–2 ट्रक हरा चारा; विशेष दिनों में लापसी",
+    about_title: "हमारे बारे में",
+    about_history: "जालौर जिले की प्रथम गौशाला; 80+ वर्षों से भीनमाल (मारवाड़, राजस्थान) में अबोल, परित्यक्त, घायल पशुओं की सेवा।",
+    about_campuses: "परिसर/क्षेत्र:",
+    about_mirpura: "मीरपुरा गौशाला: ~500 बीघा",
+    about_panch: "पांच कुआं गौशाला: ~180 बीघा",
+    about_residents: "कुल निवासियों: ~2,150 पशु।",
+    about_facilities: "सुविधाएँ: वार्ड, अस्पताल, चारा हॉल, स्टाफ क्वार्टर, संत निवास, पक्षीघर व चबूतरा, जल संरचना।",
     work_title: "हमारा कार्य",
     work_care: "पशु देखभाल",
     work_care_desc: "गाय, बैल, बकरी, भेड़, भैंस, घोड़ी; परित्यक्त या वध से बचाए गए; शांत आवास।",
@@ -156,6 +190,8 @@ const i18n = {
     work_medical_desc: "घायल या बीमार पशुओं का स्थल पर उपचार।",
     work_feed: "आहार व पोषण",
     work_feed_desc: "दैनिक सूखा + हरा चारा; त्योहारों पर लपसी।",
+    work_feed: "भोजन व पोषण",
+    work_feed_desc: "दैनिक सूखा + हरा चारा; त्योहारों पर लापसी।",
     work_green: "हरित अभियान",
     work_green_desc: "1,000+ वृक्ष; +100/वर्ष; 2024–25 में 250 लगाए।",
     work_infra: "बुनियादी ढांचा",
@@ -220,6 +256,7 @@ const i18n = {
     role_secretary: "सचिव",
     role_treasurer: "कोषाध्यक्ष",
     role_joint_secretary: "संयुक्त सचिव"
+    footer_social: "सोशल"
   }
 };
 
@@ -246,6 +283,9 @@ function renderHeaderFooter(){
     <div class="nav container">
       <a href="index.html" class="logo"><img src="assets/img/logo.svg" alt="Logo"></a>
       <nav aria-label="Primary">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="assets/img/logo.svg" alt="Logo"></a>
+      <nav class="nav" aria-label="Primary">
         <a href="index.html" data-i18n="nav_home"></a>
         <a href="about.html" data-i18n="nav_about"></a>
         <a href="work.html" data-i18n="nav_work"></a>
@@ -257,12 +297,14 @@ function renderHeaderFooter(){
       </nav>
       <div class="lang-switch" aria-label="Language">
         <button class="lang-toggle" data-lang="en" data-i18n="lang_label_en"></button>|
+        <button class="lang-toggle" data-lang="en" data-i18n="lang_label_en"></button> |
         <button class="lang-toggle" data-lang="hi" data-i18n="lang_label_hi"></button>
       </div>
     </div>`;
   const footer = document.getElementById('site-footer');
   footer.innerHTML = `
     <div class="container footer-grid">
+    <div class="footer-grid">
       <div>
         <img src="assets/img/logo.svg" alt="Logo" width="80">
         <p>Shri Jivdaya Gaushala, Bhinmal</p>
@@ -302,6 +344,7 @@ function setActiveNav(){
       a.setAttribute('aria-current','page');
     }
   });
+    <p>&copy; <span id="year"></span> Shri Jivdaya Gaushala, Bhinmal. <span data-i18n="footer_motto"></span></p>`;
 }
 
 function setLanguage(lang){
@@ -332,6 +375,19 @@ function copy(sel){
   navigator.clipboard.writeText(text).then(()=>{
     showToast(i18n[currentLang].copied);
   });
+  if (e.target.classList.contains('lang-toggle')){
+    setLanguage(e.target.dataset.lang);
+  }
+  if (e.target.classList.contains('copy-btn')){
+    const text = e.target.dataset.copy;
+    navigator.clipboard.writeText(text).then(()=>{
+      showToast('Copied!');
+    });
+  }
+  if (e.target.classList.contains('accordion-button')){
+    const content = e.target.nextElementSibling;
+    content.style.display = content.style.display === 'block' ? 'none':'block';
+  }
 }
 
 function setupForms(){
@@ -346,6 +402,7 @@ function setupForms(){
         arr.push({date:new Date().toISOString(), data});
         localStorage.setItem(storeKey, JSON.stringify(arr));
         const msgKey = id === 'donation-form' ? 'donate_success' : id === 'volunteer-form' ? 'volunteer_success' : 'contact_success';
+        let msgKey = id === 'donation-form' ? 'donate_success' : id === 'volunteer-form' ? 'volunteer_success':'contact_success';
         showToast(i18n[currentLang][msgKey]);
         form.reset();
       });
