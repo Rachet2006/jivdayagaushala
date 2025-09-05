@@ -54,6 +54,64 @@
   </section>
 </main>
 <footer id="site-footer"></footer>
+  <section class="section container">
+    <h1 data-i18n="visit_title"></h1>
+    <p data-i18n="visit_hours"></p>
+    <div class="card" style="height:300px;display:flex;align-items:center;justify-content:center;">Map placeholder</div>
+    <p data-i18n="visit_guidelines"></p>
+    <p data-i18n="volunteer_roles"></p>
+    <h2 data-i18n="volunteer_form_title"></h2>
+    <form id="volunteer-form" class="form two-col">
+      <div class="input">
+        <label for="v-name" data-i18n="donate_name"></label>
+        <input id="v-name" name="name" required>
+      </div>
+      <div class="input">
+        <label for="v-email" data-i18n="donate_email"></label>
+        <input id="v-email" type="email" name="email" required>
+      </div>
+      <div class="input">
+        <label for="v-phone" data-i18n="donate_phone"></label>
+        <input id="v-phone" name="phone" required>
+        <span class="help" data-i18n="help_phone"></span>
+      </div>
+      <div class="input">
+        <label for="v-msg" data-i18n="form_message"></label>
+        <textarea id="v-msg" name="message"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" data-i18n="donate_submit"></button>
+    </form>
+  </section>
+<header id="site-header"></header>
+<main id="main-content">
+  <h1 data-i18n="visit_title"></h1>
+  <p data-i18n="visit_hours"></p>
+  <div class="map" style="background:#ddd;height:300px;display:flex;align-items:center;justify-content:center;">Map placeholder</div>
+  <p data-i18n="visit_guidelines"></p>
+  <p data-i18n="volunteer_roles"></p>
+  <h2 data-i18n="volunteer_form_title"></h2>
+  <form id="volunteer-form">
+    <div class="form-group">
+      <label for="v-name" data-i18n="donate_name"></label>
+      <input id="v-name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="v-email" data-i18n="donate_email"></label>
+      <input id="v-email" type="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="v-phone" data-i18n="donate_phone"></label>
+      <input id="v-phone" name="phone" required>
+    </div>
+    <div class="form-group">
+      <label for="v-msg">Message</label>
+      <textarea id="v-msg" name="message"></textarea>
+    </div>
+    <button type="submit" class="btn-primary" data-i18n="donate_submit"></button>
+  </form>
+</main>
+<footer id="site-footer"></footer>
+<script src="assets/js/app.js"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
