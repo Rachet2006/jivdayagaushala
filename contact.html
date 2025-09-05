@@ -10,10 +10,62 @@
   <meta property="og:description" content="Reach out to Shri Jivdaya Gaushala.">
   <meta property="og:image" content="assets/img/hero-placeholder.svg">
   <meta property="og:type" content="website">
+  <link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/notosansdevanagari/v1/NotoSansDevanagari-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
+<header id="site-header" class="header"></header>
+<main id="main-content">
+  <section class="section container">
+    <h1 data-i18n="contact_title"></h1>
+    <div class="contact-cards">
+      <div class="card">
+        <h3 data-i18n="role_president"></h3>
+        <p>Mohan Ji Seth — 941415176 (owner to verify digits)</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="role_vpresident"></h3>
+        <p>Praveen B. Bhansali — 9869994285</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="role_secretary"></h3>
+        <p>Madanraj V. Jain — 9784208384</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="role_treasurer"></h3>
+        <p>Prithviraj T. Kavedhi — 8369482255</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="role_joint_secretary"></h3>
+        <p>Dinesh G. Seth — 8058693360</p>
+      </div>
+    </div>
+    <p><a href="#" class="btn btn-outline" data-i18n="cta_whatsapp"></a></p>
+    <h2 data-i18n="contact_form_title"></h2>
+    <form id="contact-form" class="form">
+      <div class="input">
+        <label for="c-name" data-i18n="donate_name"></label>
+        <input id="c-name" name="name" required>
+      </div>
+      <div class="input">
+        <label for="c-email" data-i18n="donate_email"></label>
+        <input id="c-email" type="email" name="email" required>
+      </div>
+      <div class="input">
+        <label for="c-phone" data-i18n="donate_phone"></label>
+        <input id="c-phone" name="phone" required>
+        <span class="help" data-i18n="help_phone"></span>
+      </div>
+      <div class="input">
+        <label for="c-msg" data-i18n="form_message"></label>
+        <textarea id="c-msg" name="message"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" data-i18n="donate_submit"></button>
+    </form>
+  </section>
 <header id="site-header"></header>
 <main id="main-content">
   <h1 data-i18n="contact_title"></h1>

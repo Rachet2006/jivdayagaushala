@@ -10,6 +10,24 @@ const i18n = {
     nav_legal: "Legal",
     lang_label_en: "EN",
     lang_label_hi: "हिन्दी",
+    hero_title: "Welcome to Shri Jivdaya Gaushala, Bhinmal",
+    hero_intro: "Rajasthan’s sanctuary of compassion for over 80 years. As the first Gaushala of Jalore district, we care for 2,150+ animals across expansive shelters and green spaces—with medical care, nutritious feed and dignity for every life.",
+    hero_cta_donate: "Donate Now",
+    hero_cta_visit: "Visit/Volunteer",
+    fastfacts_title: "Fast Facts",
+    stat_years_value: "80+",
+    stat_years_label: "years of service",
+    stat_animals_value: "~{animals_total}",
+    stat_animals_label: "animals cared for",
+    stat_wards_value: "{wards}",
+    stat_wards_label: "animal wards",
+    stat_hospital_value: "{hospital}",
+    stat_hospital_label: "animal hospital",
+    stat_fodder_value: "{fodder_halls}",
+    stat_fodder_label: "dry-fodder halls",
+    stat_trees_value: "~{trees}",
+    stat_trees_label: "shade-giving trees",
+    fact_borewell: "{borewells} borewells + {dharam_kanta} dharam-kanta (weighbridge)",
     hero_intro: "Welcome to Shri Jivdaya Gaushala, Bhinmal — Rajasthan’s sanctuary of compassion for over 80 years. As the first Gaushala of Jalore district, we care for 2,150+ animals across expansive shelters and green spaces—with medical care, nutritious feed and dignity for every life.",
     hero_cta_donate: "Donate Now",
     hero_cta_visit: "Visit/Volunteer",
@@ -91,6 +109,17 @@ const i18n = {
     footer_motto: "Made with ♥ for animals",
     footer_address: "Address: Mirpura Road, Bhinmal, Rajasthan (placeholder)",
     footer_quick_links: "Quick Links",
+    footer_social: "Connect",
+    copy: "Copy",
+    copied: "Copied!",
+    help_phone: "We will only use to coordinate your visit.",
+    form_message: "Message",
+    cta_whatsapp: "WhatsApp",
+    role_president: "President",
+    role_vpresident: "Vice President",
+    role_secretary: "Secretary",
+    role_treasurer: "Treasurer",
+    role_joint_secretary: "Joint Secretary"
     footer_social: "Connect"
   },
   hi: {
@@ -104,6 +133,35 @@ const i18n = {
     nav_legal: "कानूनी",
     lang_label_en: "EN",
     lang_label_hi: "हिन्दी",
+    hero_title: "श्री जीवदया गौशाला, भीनमाल में आपका स्वागत है",
+    hero_intro: "करुणा की यह शरणस्थली पिछले 80 वर्षों से अबोल प्राणियों की सेवा कर रही है। जालौर जिले की प्रथम गौशाला के रूप में, हम 2,150+ पशुओं की प्रेम व सम्मान से देखभाल करते हैं।",
+    hero_cta_donate: "अभी दान करें",
+    hero_cta_visit: "भेंट/सेवा करें",
+    fastfacts_title: "त्वरित तथ्य",
+    stat_years_value: "80+",
+    stat_years_label: "वर्षों की सेवा",
+    stat_animals_value: "~{animals_total}",
+    stat_animals_label: "पशु देखरेख में",
+    stat_wards_value: "{wards}",
+    stat_wards_label: "पशु वार्ड",
+    stat_hospital_value: "{hospital}",
+    stat_hospital_label: "पशु अस्पताल",
+    stat_fodder_value: "{fodder_halls}",
+    stat_fodder_label: "सूखा चारा हॉल",
+    stat_trees_value: "~{trees}",
+    stat_trees_label: "छायादार वृक्ष",
+    fact_borewell: "{borewells} बोरवेल + {dharam_kanta} धर्मकांटा",
+    fact_trees_goal: "लक्ष्य: +{trees_goal_per_year} वृक्ष/वर्ष",
+    fact_trees_planted: "~{trees_planted_2024_2025} वृक्ष 2024–25 में लगाए",
+    fact_feeding: "दैनिक भोजन: सूखा चारा + 1–2 ट्रक हरा चारा; शुभ दिनों में लपसी",
+    about_title: "परिचय",
+    about_history: "जालौर जिले की प्रथम गौशाला; मूक, त्यक्त, घायल पशुओं की 80+ वर्षों से सेवा।",
+    about_campuses: "परिसर:",
+    about_mirpura: "मीरपुरा गौशाला: ~500 बीघा",
+    about_panch: "पांच कुआ गौशाला: ~180 बीघा",
+    about_residents: "कुल निवासी: ~2,150 पशु।",
+    about_facilities: "सुविधाएँ: वार्ड, अस्पताल, चारा हॉल, स्टाफ क्वार्टर, संत निवास, पक्षीघर व चबूतरा, जल ढांचा।",
+=======
     hero_intro: "श्री जीवदया गौशाला, भीनमाल में आपका स्वागत है — करुणा की यह शरणस्थली पिछले 80 वर्षों से अबोल प्राणियों की सेवा कर रही है। जालौर जिले की प्रथम गौशाला के रूप में, हम 2,150+ पशुओं की प्रेम व सम्मान से देखभाल करते हैं।",
     hero_cta_donate: "अभी दान करें",
     hero_cta_visit: "भेंट/सेवा करें",
@@ -130,6 +188,8 @@ const i18n = {
     work_care_desc: "गाय, बैल, बकरी, भेड़, भैंस, घोड़ी; परित्यक्त या वध से बचाए गए; शांत आवास।",
     work_medical: "चिकित्सा व अस्पताल",
     work_medical_desc: "घायल या बीमार पशुओं का स्थल पर उपचार।",
+    work_feed: "आहार व पोषण",
+    work_feed_desc: "दैनिक सूखा + हरा चारा; त्योहारों पर लपसी।",
     work_feed: "भोजन व पोषण",
     work_feed_desc: "दैनिक सूखा + हरा चारा; त्योहारों पर लापसी।",
     work_green: "हरित अभियान",
@@ -185,6 +245,17 @@ const i18n = {
     footer_motto: "जानवरों के लिए प्रेम से बनाया गया",
     footer_address: "पता: मीरपुरा रोड, भीनमाल, राजस्थान (placeholder)",
     footer_quick_links: "त्वरित लिंक",
+    footer_social: "सोशल",
+    copy: "कॉपी",
+    copied: "कॉपी हो गया!",
+    help_phone: "हम केवल समन्वय हेतु इसका उपयोग करेंगे।",
+    form_message: "संदेश",
+    cta_whatsapp: "व्हाट्सऐप",
+    role_president: "अध्यक्ष",
+    role_vpresident: "उपाध्यक्ष",
+    role_secretary: "सचिव",
+    role_treasurer: "कोषाध्यक्ष",
+    role_joint_secretary: "संयुक्त सचिव"
     footer_social: "सोशल"
   }
 };
@@ -209,6 +280,9 @@ document.addEventListener('DOMContentLoaded', () => {
 function renderHeaderFooter(){
   const header = document.getElementById('site-header');
   header.innerHTML = `
+    <div class="nav container">
+      <a href="index.html" class="logo"><img src="assets/img/logo.svg" alt="Logo"></a>
+      <nav aria-label="Primary">
     <div class="container">
       <a href="index.html" class="logo"><img src="assets/img/logo.svg" alt="Logo"></a>
       <nav class="nav" aria-label="Primary">
@@ -222,12 +296,14 @@ function renderHeaderFooter(){
         <a href="legal.html" data-i18n="nav_legal"></a>
       </nav>
       <div class="lang-switch" aria-label="Language">
+        <button class="lang-toggle" data-lang="en" data-i18n="lang_label_en"></button>|
         <button class="lang-toggle" data-lang="en" data-i18n="lang_label_en"></button> |
         <button class="lang-toggle" data-lang="hi" data-i18n="lang_label_hi"></button>
       </div>
     </div>`;
   const footer = document.getElementById('site-footer');
   footer.innerHTML = `
+    <div class="container footer-grid">
     <div class="footer-grid">
       <div>
         <img src="assets/img/logo.svg" alt="Logo" width="80">
@@ -255,6 +331,19 @@ function renderHeaderFooter(){
         </div>
       </div>
     </div>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Shri Jivdaya Gaushala, Bhinmal. <span data-i18n="footer_motto"></span></p>
+    </div>`;
+  setActiveNav();
+}
+
+function setActiveNav(){
+  const path = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav a').forEach(a=>{
+    if(a.getAttribute('href') === path){
+      a.setAttribute('aria-current','page');
+    }
+  });
     <p>&copy; <span id="year"></span> Shri Jivdaya Gaushala, Bhinmal. <span data-i18n="footer_motto"></span></p>`;
 }
 
@@ -274,6 +363,18 @@ function setLanguage(lang){
 }
 
 function handleClicks(e){
+  if(e.target.classList.contains('lang-toggle')){
+    setLanguage(e.target.dataset.lang);
+  }
+}
+
+function copy(sel){
+  const el = typeof sel === 'string' ? document.querySelector(sel) : sel;
+  if(!el) return;
+  const text = el.textContent.trim();
+  navigator.clipboard.writeText(text).then(()=>{
+    showToast(i18n[currentLang].copied);
+  });
   if (e.target.classList.contains('lang-toggle')){
     setLanguage(e.target.dataset.lang);
   }
@@ -300,6 +401,7 @@ function setupForms(){
         const arr = JSON.parse(localStorage.getItem(storeKey) || '[]');
         arr.push({date:new Date().toISOString(), data});
         localStorage.setItem(storeKey, JSON.stringify(arr));
+        const msgKey = id === 'donation-form' ? 'donate_success' : id === 'volunteer-form' ? 'volunteer_success' : 'contact_success';
         let msgKey = id === 'donation-form' ? 'donate_success' : id === 'volunteer-form' ? 'volunteer_success':'contact_success';
         showToast(i18n[currentLang][msgKey]);
         form.reset();
@@ -313,6 +415,7 @@ function showToast(msg){
   if(!t){
     t = document.createElement('div');
     t.className='toast';
+    t.setAttribute('aria-live','polite');
     document.body.appendChild(t);
   }
   t.textContent = msg;

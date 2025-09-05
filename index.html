@@ -10,12 +10,66 @@
   <meta property="og:description" content="Official site of Shri Jivdaya Gaushala, caring for over 2,150 animals in Rajasthan for 80+ years.">
   <meta property="og:image" content="assets/img/hero-placeholder.svg">
   <meta property="og:type" content="website">
+  <link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/notosansdevanagari/v1/NotoSansDevanagari-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
   <!-- GA4 placeholder -->
   <!-- <script>/* GA4 placeholder */</script> -->
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
+<header id="site-header" class="header"></header>
+<main id="main-content">
+  <section class="section">
+    <div class="container grid grid-2">
+      <div>
+        <h1 data-i18n="hero_title"></h1>
+        <p data-i18n="hero_intro"></p>
+        <div class="btn-group">
+          <a href="donate.html" class="btn btn-primary" data-i18n="hero_cta_donate"></a>
+          <a href="visit-volunteer.html" class="btn btn-outline" data-i18n="hero_cta_visit"></a>
+        </div>
+      </div>
+      <div>
+        <img src="assets/img/hero-placeholder.svg" alt="Cattle at the Gaushala" class="img-cover" decoding="async">
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h2 data-i18n="fastfacts_title"></h2>
+      <div class="grid grid-3">
+        <div class="card stat">
+          <span class="value" data-i18n="stat_years_value"></span>
+          <span class="label" data-i18n="stat_years_label"></span>
+        </div>
+        <div class="card stat">
+          <span class="value" data-i18n="stat_animals_value"></span>
+          <span class="label" data-i18n="stat_animals_label"></span>
+        </div>
+        <div class="card stat">
+          <span class="value" data-i18n="stat_wards_value"></span>
+          <span class="label" data-i18n="stat_wards_label"></span>
+        </div>
+        <div class="card stat">
+          <span class="value" data-i18n="stat_hospital_value"></span>
+          <span class="label" data-i18n="stat_hospital_label"></span>
+        </div>
+        <div class="card stat">
+          <span class="value" data-i18n="stat_fodder_value"></span>
+          <span class="label" data-i18n="stat_fodder_label"></span>
+        </div>
+        <div class="card stat">
+          <span class="value" data-i18n="stat_trees_value"></span>
+          <span class="label" data-i18n="stat_trees_label"></span>
+        </div>
+      </div>
+      <p class="help" data-i18n="fact_borewell"></p>
+      <p class="help" data-i18n="fact_trees_goal"></p>
+      <p class="help" data-i18n="fact_trees_planted"></p>
+      <p class="help" data-i18n="fact_feeding"></p>
+    </div>
 <header id="site-header"></header>
 <main id="main-content">
   <section class="hero">
