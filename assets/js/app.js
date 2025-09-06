@@ -13,15 +13,14 @@ const i18n = {
     lang_label_en: "EN",
     lang_label_hi: "हिन्दी",
 
-    /* Hero / Fast facts */
+    /* Hero */
     hero_title: "Welcome to Shri Jivdaya Gaushala, Bhinmal",
     hero_intro:
-      "Rajasthan’s sanctuary of compassion for over 80 years. As the first Gaushala of Jalore district, we care for 2,150+ animals across expansive shelters and green spaces—with medical care, nutritious feed and dignity for every life.",
+      "For over 80 years, Rajasthan’s sanctuary of compassion. As the first Gaushala in Jalore district, we provide lifelong care to 2,150+ animals across vast shelters and green landscapes — ensuring every being receives medical attention, nourishing feed, and dignity.",
     hero_cta_donate: "Donate Now",
-    hero_cta_visit: "Visit/Volunteer",
-    fastfacts_title: "Fast Facts",
-    stat_years_value: "80+",
-    stat_years_label: "years of service",
+    hero_cta_visit: "Visit / Volunteer",
+
+    /* Hero stats (uses siteData where possible) */
     stat_animals_value: "~{animals_total}",
     stat_animals_label: "animals cared for",
     stat_wards_value: "{wards}",
@@ -35,55 +34,60 @@ const i18n = {
     stat_cost_value: "₹1.05L",
     stat_cost_label: "daily running cost",
 
-    /* Fast facts – detailed lines */
+    /* Fast Facts block */
+    fastfacts_title: "Fast Facts",
     fact_years: "80+ years of service",
-    fact_animals:
-      "~{animals_total} animals (cows, bulls, goats, sheep, buffaloes, mares)",
-    fact_wards: "{wards} animal wards",
-    fact_hospital: "{hospital} animal hospital",
-    fact_fodder: "{fodder_halls} dry-fodder halls",
-    fact_borewell: "2 borewells + 1 dharam-kanta (weighbridge)",
-    fact_trees: "~{trees} shade-giving trees (neem, khejri, sisam)",
-    fact_trees_goal: "Goal: +{trees_goal_per_year} trees/year",
-    fact_trees_planted: "~{trees_planted_2024_2025} planted in 2024–25",
-    fact_feeding:
-      "Daily feeding: dry fodder + 1–2 truckloads of green fodder; lapsi on auspicious days",
+    fact_animals: "2,150+ animals in care",
+    fact_cost: "₹1.05L daily running cost",
+
+    fastfacts_infra_title: "Infrastructure",
+    fastfacts_infra_points1: "15 animal wards • 1 on-site hospital • 3 fodder halls",
+    fastfacts_infra_points2: "2 borewells + 1 dharam-kanta (weighbridge)",
+
+    fastfacts_green_title: "Green Drive",
+    fastfacts_green_points1: "~1,000 shade-giving trees on campus",
+    fastfacts_green_points2: "Goal: +100 trees/year • ~250 planted in 2024–25",
+
+    fastfacts_feed_title: "Feeding",
+    fastfacts_feed_points1:
+      "Dry fodder + 1–2 truckloads of green fodder daily; lapsi on auspicious days",
 
     /* About */
     about_title: "About Us",
     about_history:
-      "First Gaushala of Jalore district; serving mute, abandoned, and injured animals for 80+ years in the holy town of Bhinmal (Marwar, Rajasthan).",
-    about_campuses: "Campuses/areas:",
+      "Shri Jivdaya Gaushala, established in the holy town of Bhinmal (Marwar, Rajasthan), is the first Gaushala of Jalore district. For over 80 years, we have sheltered mute, abandoned, and injured animals — giving them safety, care, and dignity.",
+    about_campuses: "Campuses & Scale",
     about_mirpura: "Mirpura Gaushala: ~500 bigha",
     about_panch: "Panch Kuwa Gaushala: ~180 bigha",
-    about_residents: "Combined residents: ~2,150 animals.",
+    about_residents:
+      "Residents: ~2,150 animals (cows, bulls, buffaloes, goats, sheep, mares)",
     about_facilities:
-      "Facilities include wards, hospital, fodder halls, staff quarters, saints’ stay, birdhouse & chabutra, and water infrastructure.",
+      "15 animal wards • on-site hospital • fodder halls • staff quarters • saints’ stay • birdhouse & chabutra • water infrastructure (2 borewells) • dharam-kanta (weighbridge)",
 
-    /* Work (unchanged labels used elsewhere) */
+    /* Work */
     work_title: "Our Work",
     work_care: "Animal Care",
     work_care_desc:
-      "Cows, bulls, goats, sheep, buffaloes, mares—rescued from abandonment or slaughter—living in a peaceful habitat.",
+      "Rescue and lifelong shelter for abandoned or at-risk animals in a peaceful habitat.",
     work_medical: "Medical & Hospital",
     work_medical_desc:
-      "On-site treatment and care for injured or sick animals.",
+      "On-site treatment, recovery, and ongoing care for injured or sick animals.",
     work_feed: "Feeding & Nutrition",
     work_feed_desc:
-      "Daily dry + green fodder; lapsi on festivals.",
+      "Daily dry + green fodder; lapsi prepared on auspicious days and festivals.",
     work_green: "Green Drive",
     work_green_desc:
-      "1,000+ trees; +100/year; 250 planted in 2024–25.",
+      "~1,000 shade-giving trees; target of +100 new trees every year; 250 planted in 2024–25.",
     work_infra: "Infrastructure",
     work_infra_desc:
-      "Wards, fodder halls, borewells, dharam-kanta.",
+      "Wards, hospital, fodder halls, borewells, and a dharam-kanta to manage feed logistics.",
 
     /* Donate */
     donate_title: "Donate",
     donate_intro:
-      "During sacred days like Paryushan and throughout the year, your support sustains over two thousand lives. The Gaushala’s daily operating cost is approx ₹1.05 lakh.",
+      "Your support sustains lives. During sacred days like Paryushan and throughout the year, your contributions safeguard over 2,000 animals. Our daily running cost is approximately ₹1.05 lakh.",
     donate_disclaimer:
-      "For 80G/receipt needs, ensure you enter your full name, email, phone, and address in the form.",
+      "Receipt (80G): To receive an 80G receipt, please provide your full name, email, phone number, and address in the donation form.",
     donate_options: "Donation Options",
     donate_one_time: "One-time",
     donate_monthly: "Monthly",
@@ -112,8 +116,7 @@ const i18n = {
     volunteer_roles:
       "Volunteer roles include animal care assistance, plantation, fodder distribution, and awareness drives.",
     volunteer_form_title: "Volunteer Form",
-    volunteer_success:
-      "Thank you for your interest! We'll get in touch.",
+    volunteer_success: "Thank you for your interest! We'll get in touch.",
     map_placeholder: "Map placeholder",
 
     /* Gallery */
@@ -134,12 +137,11 @@ const i18n = {
 
     /* Footer / misc */
     footer_motto: "Made with ♥ for animals",
-    footer_address: "Address: Mirpura Road, Bhinmal, Jalore, Rajasthan",
+    footer_address: "Address: Mirpura Road, Bhinmal, Rajasthan (placeholder)",
     footer_quick_links: "Quick Links",
     footer_social: "Connect",
     copy: "Copy",
     copied: "Copied!",
-    help_phone: "We will only use this to coordinate your visit.",
     form_message: "Message",
     cta_whatsapp: "WhatsApp",
     role_president: "President",
@@ -162,15 +164,14 @@ const i18n = {
     lang_label_en: "EN",
     lang_label_hi: "हिन्दी",
 
-    /* Hero / facts */
+    /* Hero */
     hero_title: "श्री जीवदया गौशाला, भीनमाल में आपका स्वागत है",
     hero_intro:
-      "करुणा की शरणस्थली—80 वर्षों से सेवा। जालौर जिले की प्रथम गौशाला के रूप में, हम 2,150+ पशुओं की हरियाली और सम्मानपूर्ण देखभाल करते हैं—चिकित्सा, पौष्टिक आहार और प्रत्येक जीवन के सम्मान के साथ।",
+      "पिछले 80+ वर्षों से करुणा की शरणस्थली। जालौर ज़िले की पहली गौशाला के रूप में, हम 2,150+ पशुओं को विशाल आश्रयों और हरित प्रांगणों में आजीवन देखभाल प्रदान करते हैं—जहाँ हर प्राणी को उपचार, पौष्टिक आहार और गरिमा मिले।",
     hero_cta_donate: "अभी दान करें",
-    hero_cta_visit: "भेंट/सेवा करें",
-    fastfacts_title: "त्वरित तथ्य",
-    stat_years_value: "80+",
-    stat_years_label: "वर्षों की सेवा",
+    hero_cta_visit: "भेंट / सेवा",
+
+    /* Hero stats */
     stat_animals_value: "~{animals_total}",
     stat_animals_label: "पशु देखरेख में",
     stat_wards_value: "{wards}",
@@ -184,55 +185,60 @@ const i18n = {
     stat_cost_value: "₹1.05लाख",
     stat_cost_label: "दैनिक व्यय",
 
-    /* Fast facts – detailed lines */
+    /* Fast Facts block */
+    fastfacts_title: "त्वरित तथ्य",
     fact_years: "80+ वर्षों की सेवा",
-    fact_animals:
-      "~{animals_total} पशु (गाय, बैल, बकरी, भेड़, भैंस, घोड़ी)",
-    fact_wards: "{wards} पशु वार्ड",
-    fact_hospital: "{hospital} पशु अस्पताल",
-    fact_fodder: "{fodder_halls} सूखा चारा हॉल",
-    fact_borewell: "2 बोरवेल + 1 धर्मकांटा (वेजब्रिज)",
-    fact_trees: "~{trees} छायादार वृक्ष (नीम, खेजड़ी, सिसम)",
-    fact_trees_goal: "लक्ष्य: +{trees_goal_per_year} वृक्ष/वर्ष",
-    fact_trees_planted: "~{trees_planted_2024_2025} वृक्ष 2024–25 में",
-    fact_feeding:
-      "दैनिक भोजन: सूखा चारा + 1–2 ट्रक हरा चारा; शुभ दिनों में लापसी",
+    fact_animals: "2,150+ पशु देखरेख में",
+    fact_cost: "₹1.05लाख दैनिक व्यय",
+
+    fastfacts_infra_title: "बुनियादी ढांचा",
+    fastfacts_infra_points1: "15 पशु वार्ड • 1 स्थल पर अस्पताल • 3 चारा हॉल",
+    fastfacts_infra_points2: "2 बोरवेल + 1 धर्मकांटा (वेजब्रिज)",
+
+    fastfacts_green_title: "हरित अभियान",
+    fastfacts_green_points1: "~1,000 छायादार वृक्ष परिसर में",
+    fastfacts_green_points2: "लक्ष्य: +100 वृक्ष/वर्ष • 2024–25 में ~250 लगाए",
+
+    fastfacts_feed_title: "भोजन",
+    fastfacts_feed_points1:
+      "प्रतिदिन सूखा चारा + 1–2 ट्रक हरा चारा; शुभ दिनों में लापसी",
 
     /* About */
     about_title: "हमारे बारे में",
     about_history:
-      "जालौर जिले की प्रथम गौशाला; पवित्र नगरी भीनमाल (मारवाड़, राजस्थान) में 80+ वर्षों से अबोल, परित्यक्त और घायल पशुओं की सेवा।",
-    about_campuses: "परिसर/क्षेत्र:",
+      "श्री जीवदया गौशाला, पवित्र नगरी भीनमाल (मारवाड़, राजस्थान) में स्थापित, जालौर ज़िले की प्रथम गौशाला है। 80+ वर्षों से हम अबोल, परित्यक्त और घायल पशुओं को सुरक्षा, देखभाल और गरिमा प्रदान कर रहे हैं।",
+    about_campuses: "परिसर व विस्तार",
     about_mirpura: "मीरपुरा गौशाला: ~500 बीघा",
-    about_panch: "पांच कुआँ गौशाला: ~180 बीघा",
-    about_residents: "कुल निवासियों: ~2,150 पशु।",
+    about_panch: "पाँच कुआँ गौशाला: ~180 बीघा",
+    about_residents:
+      "निवासी: ~2,150 पशु (गाय, बैल, भैंस, बकरी, भेड़, घोड़ी)",
     about_facilities:
-      "सुविधाएँ: वार्ड, अस्पताल, चारा हॉल, स्टाफ क्वार्टर, संत निवास, पक्षीघर व चबूतरा, तथा जल संरचना।",
+      "15 पशु वार्ड • स्थल पर अस्पताल • चारा हॉल • स्टाफ क्वार्टर • संत निवास • पक्षीघर व चबूतरा • जल संरचना (2 बोरवेल) • धर्मकांटा (वेजब्रिज)",
 
     /* Work */
     work_title: "हमारा कार्य",
     work_care: "पशु देखभाल",
     work_care_desc:
-      "गाय, बैल, बकरी, भेड़, भैंस, घोड़ी—परित्यक्त या वध से बचाए गए—शांत वातावरण में।",
+      "परित्यक्त या जोखिमग्रस्त पशुओं का बचाव और शांत वातावरण में आजीवन आश्रय।",
     work_medical: "चिकित्सा व अस्पताल",
     work_medical_desc:
-      "घायल व बीमार पशुओं का स्थल पर उपचार।",
+      "घायल/बीमार पशुओं का स्थल पर उपचार, रिकवरी और सतत देखभाल।",
     work_feed: "भोजन व पोषण",
     work_feed_desc:
-      "दैनिक सूखा + हरा चारा; त्योहारों पर लापसी।",
+      "दैनिक सूखा + हरा चारा; त्योहारों/शुभ दिनों पर लापसी।",
     work_green: "हरित अभियान",
     work_green_desc:
-      "1,000+ वृक्ष; +100/वर्ष; 2024–25 में 250 लगाए।",
+      "~1,000 छायादार वृक्ष; हर वर्ष +100 नए वृक्ष का लक्ष्य; 2024–25 में 250 लगाए।",
     work_infra: "बुनियादी ढांचा",
     work_infra_desc:
-      "वार्ड, चारा हॉल, बोरवेल, धर्मकांटा।",
+      "वार्ड, अस्पताल, चारा हॉल, बोरवेल और चारा लॉजिस्टिक्स हेतु धर्मकांटा।",
 
     /* Donate */
     donate_title: "दान",
     donate_intro:
-      "पर्युषण जैसे पावन दिनों सहित पूरे वर्ष, आपका सहयोग दो हजार से अधिक प्राणियों का सहारा है। गौशाला का दैनिक व्यय लगभग ₹1.05 लाख है।",
+      "आपका सहयोग जीवन बचाता है। पर्युषण जैसे पावन दिनों सहित पूरे वर्ष, आपके योगदान 2,000+ पशुओं की रक्षा करते हैं। दैनिक व्यय लगभग ₹1.05 लाख है।",
     donate_disclaimer:
-      "80G/रसीद हेतु कृपया फॉर्म में अपना पूरा नाम, ईमेल, फोन और पता अवश्य भरें।",
+      "रसीद (80G): 80G रसीद हेतु कृपया फॉर्म में अपना पूरा नाम, ईमेल, फ़ोन और पता अवश्य भरें।",
     donate_options: "दान विकल्प",
     donate_one_time: "एकमुश्त",
     donate_monthly: "मासिक",
@@ -251,13 +257,13 @@ const i18n = {
     donate_purpose: "उद्देश्य",
     donate_submit: "जमा करें",
     donate_success:
-      "धन्यवाद! आपकी अभिरुचि सहेज ली गई है। टीम शीघ्र ही संपर्क करेगी।",
+      "धन्यवाद! आपकी अभिरुचि सहेज ली गई है। टीम शीघ्र संपर्क करेगी।",
 
     /* Visit / Volunteer */
     visit_title: "भेंट व सेवा",
     visit_hours: "भेंट समय: सुबह 9:00 – शाम 5:00",
     visit_guidelines:
-      "भेंट के दौरान सुरक्षा व स्वच्छता निर्देशों का पालन करें और पशु वार्ड के पास स्टाफ के निर्देशों का सम्मान करें।",
+      "भेंट के दौरान सुरक्षा व स्वच्छता निर्देशों का पालन करें और पशु वार्डों के पास स्टाफ के निर्देशों का सम्मान करें।",
     volunteer_roles:
       "सेवा भूमिकाएँ: पशु देखभाल, वृक्षारोपण, चारा वितरण और जागरूकता अभियान।",
     volunteer_form_title: "सेवक फॉर्म",
@@ -282,12 +288,11 @@ const i18n = {
 
     /* Footer / misc */
     footer_motto: "जानवरों के लिए प्रेम से बनाया गया",
-    footer_address: "पता: मीरपुरा रोड, भीनमाल, जालौर, राजस्थान",
+    footer_address: "पता: मीरपुरा रोड, भीनमाल, राजस्थान (placeholder)",
     footer_quick_links: "त्वरित लिंक",
     footer_social: "सोशल",
     copy: "कॉपी",
     copied: "कॉपी हो गया!",
-    help_phone: "हम इसे केवल आपके भेंट समन्वय हेतु उपयोग करेंगे।",
     form_message: "संदेश",
     cta_whatsapp: "व्हाट्सऐप",
     role_president: "अध्यक्ष",
@@ -297,6 +302,7 @@ const i18n = {
     role_joint_secretary: "संयुक्त सचिव"
   }
 };
+
 
 /* ---------- globals ---------- */
 let currentLang = "en";
