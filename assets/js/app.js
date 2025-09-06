@@ -328,8 +328,7 @@ function renderHeaderFooter() {
         </a>
         <div class="nav-links">
           <a href="index.html" data-i18n="nav_home">Home</a>
-          <a href="about.html" data-i18n="nav_about">About</a>
-          <a href="work.html" data-i18n="nav_work">Our Work</a>
+          <a href="about-work.html" data-i18n="nav_about">About</a>
           <a href="gallery.html" data-i18n="nav_gallery">Gallery</a>
           <a href="donate.html" data-i18n="nav_donate">Donate</a>
           <a href="visit-volunteer.html" data-i18n="nav_visit">Visit / Volunteer</a>
