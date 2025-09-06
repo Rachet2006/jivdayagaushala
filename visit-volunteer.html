@@ -2,129 +2,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Visit & Volunteer – Shri Jivdaya Gaushala, Bhinmal</title>
-  <meta name="description" content="Plan a visit or volunteer at Shri Jivdaya Gaushala.">
-  <meta property="og:title" content="Visit & Volunteer – Shri Jivdaya Gaushala, Bhinmal">
-  <meta property="og:description" content="Plan a visit or volunteer at Shri Jivdaya Gaushala.">
-  <meta property="og:image" content="assets/img/hero-placeholder.svg">
-  <meta property="og:type" content="website">
-  <link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="https://fonts.gstatic.com/s/notosansdevanagari/v1/NotoSansDevanagari-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <meta name="description" content="Plan a visit or volunteer at Shri Jivdaya Gaushala." />
+  <meta property="og:title" content="Visit & Volunteer – Shri Jivdaya Gaushala, Bhinmal" />
+  <meta property="og:description" content="Plan a visit or volunteer at Shri Jivdaya Gaushala." />
+  <meta property="og:image" content="assets/img/hero-placeholder.svg" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
   <script src="assets/js/app.js" defer></script>
 </head>
 <body>
-<a href="#main-content" class="skip-link">Skip to content</a>
-<header id="site-header" class="header"></header>
-<main id="main-content">
-  <section class="section">
-    <div class="container">
-      <h1 data-i18n="visit_title">Visit &amp; Volunteer</h1>
-      <div class="prose">
-        <p data-i18n="visit_hours">Visiting hours: TBD</p>
-        <div class="card" style="height:300px;display:flex;align-items:center;justify-content:center;">Map placeholder</div>
-        <p data-i18n="visit_guidelines">Follow safety &amp; hygiene guidelines during visit.</p>
-        <p data-i18n="volunteer_roles">Volunteer roles include animal care, plantation, awareness drives.</p>
-      </div>
-      <h2 data-i18n="volunteer_form_title">Volunteer Form</h2>
-      <form id="volunteer-form" class="form two-col">
-        <div class="input">
-          <label for="v-name" data-i18n="donate_name"></label>
-          <input id="v-name" name="name" required>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <!-- Header injected by app.js -->
+  <header id="site-header" class="header"></header>
+
+  <main id="main-content">
+    <section class="section">
+      <div class="container">
+        <h1 data-i18n="visit_title">Visit &amp; Volunteer</h1>
+
+        <div class="prose">
+          <p data-i18n="visit_hours">Visiting hours: 9:00 AM – 5:00 PM (TBD by NGO)</p>
+
+          <!-- Map area -->
+          <div class="card" style="height:300px;display:flex;align-items:center;justify-content:center;">
+            <!-- Replace this placeholder with a real embedded map when you have the link.
+            Example (update "src" with your map share link):
+            <iframe
+              title="Gaushala Location Map"
+              src="https://www.google.com/maps/embed?pb=YOUR_EMBED_CODE"
+              width="100%" height="100%" style="border:0" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            -->
+            <span data-i18n="map_placeholder">Map placeholder</span>
+          </div>
+
+          <p data-i18n="visit_guidelines">
+            Please follow safety and hygiene guidelines during your visit; listen to staff instructions around animal wards.
+          </p>
+          <p data-i18n="volunteer_roles">
+            Volunteer roles include animal care assistance, plantation, fodder distribution, and awareness drives.
+          </p>
         </div>
-        <div class="input">
-          <label for="v-email" data-i18n="donate_email"></label>
-          <input id="v-email" type="email" name="email" required>
-        </div>
-        <div class="input">
-          <label for="v-phone" data-i18n="donate_phone"></label>
-          <input id="v-phone" name="phone" required>
-          <span class="help" data-i18n="help_phone"></span>
-        </div>
-        <div class="input">
-          <label for="v-msg" data-i18n="form_message"></label>
-          <textarea id="v-msg" name="message"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" data-i18n="donate_submit">Submit</button>
-      </form>
-    </div>
-  </section>
-</main>
-<footer id="site-footer"></footer>
-  <section class="section container">
-    <h1 data-i18n="visit_title"></h1>
-    <p data-i18n="visit_hours"></p>
-    <div class="card" style="height:300px;display:flex;align-items:center;justify-content:center;">Map placeholder</div>
-    <p data-i18n="visit_guidelines"></p>
-    <p data-i18n="volunteer_roles"></p>
-    <h2 data-i18n="volunteer_form_title"></h2>
-    <form id="volunteer-form" class="form two-col">
-      <div class="input">
-        <label for="v-name" data-i18n="donate_name"></label>
-        <input id="v-name" name="name" required>
+
+        <h2 data-i18n="volunteer_form_title">Volunteer Form</h2>
+        <form id="volunteer-form" class="form two-col" novalidate>
+          <div class="input">
+            <label for="v-name" data-i18n="donate_name">Full Name</label>
+            <input id="v-name" name="name" autocomplete="name" required />
+          </div>
+          <div class="input">
+            <label for="v-email" data-i18n="donate_email">Email</label>
+            <input id="v-email" type="email" name="email" autocomplete="email" required />
+          </div>
+          <div class="input">
+            <label for="v-phone" data-i18n="donate_phone">Phone</label>
+            <input id="v-phone" name="phone" inputmode="tel" autocomplete="tel" required />
+            <span class="help" data-i18n="help_phone">Include country code if outside India.</span>
+          </div>
+          <div class="input" style="grid-column:1 / -1;">
+            <label for="v-msg" data-i18n="form_message">Message</label>
+            <textarea id="v-msg" name="message" rows="4" placeholder="Tell us how you’d like to help"></textarea>
+          </div>
+
+          <div style="grid-column:1 / -1; display:flex; gap:var(--space-3); justify-content:center;">
+            <button type="submit" class="btn btn-primary" data-i18n="donate_submit">Submit</button>
+            <button type="reset" class="btn btn-outline">Clear</button>
+          </div>
+        </form>
       </div>
-      <div class="input">
-        <label for="v-email" data-i18n="donate_email"></label>
-        <input id="v-email" type="email" name="email" required>
-      </div>
-      <div class="input">
-        <label for="v-phone" data-i18n="donate_phone"></label>
-        <input id="v-phone" name="phone" required>
-        <span class="help" data-i18n="help_phone"></span>
-      </div>
-      <div class="input">
-        <label for="v-msg" data-i18n="form_message"></label>
-        <textarea id="v-msg" name="message"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary" data-i18n="donate_submit"></button>
-    </form>
-  </section>
-<header id="site-header"></header>
-<main id="main-content">
-  <h1 data-i18n="visit_title"></h1>
-  <p data-i18n="visit_hours"></p>
-  <div class="map" style="background:#ddd;height:300px;display:flex;align-items:center;justify-content:center;">Map placeholder</div>
-  <p data-i18n="visit_guidelines"></p>
-  <p data-i18n="volunteer_roles"></p>
-  <h2 data-i18n="volunteer_form_title"></h2>
-  <form id="volunteer-form">
-    <div class="form-group">
-      <label for="v-name" data-i18n="donate_name"></label>
-      <input id="v-name" name="name" required>
+    </section>
+  </main>
+
+  <!-- Footer injected by app.js -->
+  <footer id="site-footer"></footer>
+
+  <noscript>
+    <div class="banner container" style="margin: 1rem auto">
+      JavaScript is disabled. Content is shown in English. Enable JS to use the language toggle.
     </div>
-    <div class="form-group">
-      <label for="v-email" data-i18n="donate_email"></label>
-      <input id="v-email" type="email" name="email" required>
-    </div>
-    <div class="form-group">
-      <label for="v-phone" data-i18n="donate_phone"></label>
-      <input id="v-phone" name="phone" required>
-    </div>
-    <div class="form-group">
-      <label for="v-msg">Message</label>
-      <textarea id="v-msg" name="message"></textarea>
-    </div>
-    <button type="submit" class="btn-primary" data-i18n="donate_submit"></button>
-  </form>
-</main>
-<footer id="site-footer"></footer>
-<script src="assets/js/app.js"></script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NGO",
-  "name": "Shri Jivdaya Gaushala, Bhinmal",
-  "url": "https://example.org",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Bhinmal",
-    "addressRegion": "Rajasthan",
-    "addressCountry": "IN"
+  </noscript>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "Shri Jivdaya Gaushala, Bhinmal",
+    "url": "https://rachet2006.github.io/jivdayagaushala/visit-volunteer.html",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bhinmal",
+      "addressRegion": "Rajasthan",
+      "addressCountry": "IN"
+    }
   }
-}
-</script>
+  </script>
 </body>
 </html>
