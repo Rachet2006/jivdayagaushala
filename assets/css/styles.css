@@ -296,3 +296,18 @@ footer a { color:#fff; }
   margin-bottom:var(--space-4);
 }
 .social-icons svg { width:24px; height:24px; fill:#fff; }
+
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-1);
+}
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
