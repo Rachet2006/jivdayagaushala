@@ -167,33 +167,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const el = document.getElementById('expensesChart');
   if (!el || !window.Chart) return;
 
-  const total = 105000; // ₹1.05 lakh
   const breakdown = [
-    { label: 'Green & Dry Fodder', value: 0.65 },
-    { label: 'Medical Care', value: 0.15 },
-    { label: 'Staff & Caretakers', value: 0.10 },
-    { label: 'Utilities & Maintenance', value: 0.07 },
-    { label: 'Upkeep & Contingency', value: 0.03 }
+    { label: 'Rest Food (Dry Fodder)', value: 30000 },
+    { label: 'Green Grass', value: 35000 },
+    { label: 'Medical Care', value: 29000 },
+    { label: 'Staff & Caretakers', value: 6000 },
+    { label: 'Utilities & Contingency', value: 5000 }
   ];
-  const amounts = breakdown.map(d => Math.round(d.value * total));
-  const labels = breakdown.map(d => `${d.label} (₹${amounts.shift()?.toLocaleString('en-IN')})`);
 
-  // rebuild amounts after shift:
-  const amounts2 = [
-    Math.round(0.65 * total),
-    Math.round(0.15 * total),
-    Math.round(0.10 * total),
-    Math.round(0.07 * total),
-    Math.round(0.03 * total)
-  ];
+  const labels = breakdown.map(d => `${d.label} (₹${d.value.toLocaleString('en-IN')})`);
+  const amounts = breakdown.map(d => d.value);
 
   new Chart(el, {
     type: 'pie',
     data: {
       labels,
       datasets: [{
-        data: amounts2
-        // Chart.js will pick default colors. You can set a custom palette if you want.
+        data: amounts,
+        backgroundColor: [
+          '#1F6F50',
+          '#E39B00',
+          '#4E79A7',
+          '#F28E2B',
+          '#76B7B2'
+        ]
       }]
     },
     options: {
