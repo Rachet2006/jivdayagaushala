@@ -249,3 +249,47 @@ footer a{ color:#fff; }
   margin-bottom:var(--space-4);
 }
 .social-icons svg{ width:24px; height:24px; fill:#fff; }
+/* --- Mobile Nav Overlay Fix --- */
+.nav { 
+  position: relative; /* allow dropdown to anchor here */
+}
+
+@media (max-width: 768px){
+  .menu-toggle { 
+    display: inline-flex; 
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;      /* drop below top bar */
+    left: 0;
+    right: 0;
+    z-index: 999;
+    flex-direction: column;
+    background: var(--clr-surface);
+    border-top: 1px solid var(--clr-border);
+    border-bottom: 1px solid var(--clr-border);
+    padding: .5rem 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,.08);
+    border-radius: 0 0 12px 12px;
+  }
+
+  .nav-links.active {
+    display: flex; /* reveal on toggle */
+  }
+
+  .nav-links a,
+  .nav-links .btn {
+    width: 100%;
+    text-align: center;
+    padding: .9rem 1rem; /* comfortable tap targets */
+  }
+
+  .nav-links { gap: .25rem; } /* tighter spacing on phones */
+
+  .logo img { 
+    max-height: 40px; 
+    height: auto; 
+  }
+}
