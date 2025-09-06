@@ -389,17 +389,6 @@ function renderHeaderFooter() {
             <li><a href="donate.html" data-i18n="nav_donate">Donate</a></li>
           </ul>
         </div>
-        <div>
-          <h3 data-i18n="footer_social">Connect</h3>
-          <div class="social-icons">
-            <a href="#" aria-label="Facebook">
-              <svg viewBox="0 0 24 24" width="24" height="24"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-2.9h2v-2.2c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v2h2.2L16 14.9h-2v7A10 10 0 0 0 22 12"/></svg>
-            </a>
-            <a href="#" aria-label="Twitter">
-              <svg viewBox="0 0 24 24" width="24" height="24"><path d="M19.5 7.4c.01.2.01.4.01.6 0 6.2-4.7 13.4-13.4 13.4-2.7 0-5.1-.8-7.2-2.2.37.04.74.06 1.12.06 2.2 0 4.3-.75 5.9-2-2-.04-3.7-1.4-4.3-3.3.28.05.57.07.87.07.42 0 .84-.06 1.23-.16-2.1-.42-3.7-2.3-3.7-4.5v-.06c.62.35 1.3.56 2 .58-1.2-.8-2-2.2-2-3.7 0-.82.22-1.6.62-2.3 2.3 2.8 5.8 4.6 9.7 4.8-.08-.33-.12-.68-.12-1.03 0-2.5 2-4.6 4.6-4.6 1.3 0 2.5.55 3.3 1.4 1-.2 2-.55 2.8-1-.33 1-.99 1.8-1.8 2.3.9-.1 1.7-.35 2.5-.7-.6.9-1.3 1.8-2.1 2.4z"/></svg>
-            </a>
-          </div>
-        </div>
       </div>
       <div class="container">
         <p>&copy; <span id="year"></span> Shri Jivdaya Gaushala, Bhinmal. <span data-i18n="footer_motto">Made with ♥ for animals</span></p>
