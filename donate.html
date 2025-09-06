@@ -21,136 +21,101 @@
   <header id="site-header" class="header"></header>
 
   <main id="main-content">
-    <!-- Title & options -->
-    <section class="section">
-      <div class="container">
-        <h1 data-i18n="donate_title">Donate</h1>
-        <p class="lead prose" data-i18n="donate_intro">
-          During sacred days like Paryushan and throughout the year, your support sustains over two thousand lives.
-          The Gaushala’s daily operating cost is approx ₹1.05 lakh.
-        </p>
+  <section class="section">
+    <div class="container">
+      <h1 data-i18n="donate_title">Donate</h1>
+      <p class="lead" data-i18n="donate_intro">
+        During sacred days like Paryushan and throughout the year, your support sustains over two thousand lives. The Gaushala’s daily operating cost is approx ₹1.05 lakh.
+      </p>
+    </div>
+  </section>
 
-        <h2 data-i18n="donate_options">Donation Options</h2>
-        <ul class="grid grid-3" role="list">
-          <li class="card" data-i18n="donate_one_time">One-time</li>
-          <li class="card" data-i18n="donate_monthly">Monthly</li>
-          <li class="card" data-i18n="donate_sponsor">Sponsor a Cow</li>
-          <li class="card" data-i18n="donate_feed">Feed for a Day</li>
-          <li class="card" data-i18n="donate_medical">Medical Care</li>
-          <li class="card" data-i18n="donate_tree">Plant a Tree</li>
-        </ul>
+  <!-- HOW FUNDS ARE USED (Pie chart) -->
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <h2 style="margin-top:0;">How your ₹1.05L supports animals each day</h2>
+        <canvas id="expensesChart" aria-label="Daily expenses breakdown (pie chart)"></canvas>
+        <p class="help" style="margin-top:var(--space-3)">
+          Split is illustrative; finalize after NGO confirmation.
+        </p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Bank transfer details -->
-    <section class="section">
-      <div class="container">
-        <h2 data-i18n="donate_bank">Donate by Bank Transfer</h2>
-        <p class="prose" style="text-align:center">
-          Your support sustains over two thousand lives every day. The Gaushala’s daily expense is approx ₹1.05 lakh.
-        </p>
-
-        <div class="grid grid-2" style="margin-top:var(--space-4)">
-          <div class="card">
-            <h3 style="margin-top:0; text-align:center">State Bank of India – Bhinmal</h3>
-            <p><strong>Account Name:</strong> Shri Jivdaya Gaushala Bhinmal</p>
-            <p><strong>S/B A/C:</strong> <span id="sbi-ac">30394883991</span>
-              <button class="btn btn-outline small" onclick="copy('#sbi-ac')" data-i18n="copy">Copy</button></p>
-            <p><strong>IFSC:</strong> <span id="sbi-ifsc">SBIN0011307</span>
-              <button class="btn btn-outline small" onclick="copy('#sbi-ifsc')" data-i18n="copy">Copy</button></p>
-          </div>
-
-          <div class="card">
-            <h3 style="margin-top:0; text-align:center">Union Bank of India – Bhinmal</h3>
-            <p><strong>Account Name:</strong> Shri Jivdaya Gaushala Bhinmal</p>
-            <p><strong>Current A/C:</strong> <span id="ubi-ac">749201010050035</span>
-              <button class="btn btn-outline small" onclick="copy('#ubi-ac')" data-i18n="copy">Copy</button></p>
-            <p><strong>IFSC:</strong> <span id="ubi-ifsc">UBIN0574929</span>
-              <button class="btn btn-outline small" onclick="copy('#ubi-ifsc')" data-i18n="copy">Copy</button></p>
-          </div>
+  <!-- BANK DETAILS ONLY -->
+  <section class="section">
+    <div class="container">
+      <h2 data-i18n="donate_bank">Donate by Bank Transfer</h2>
+      <div class="grid grid-2" style="margin-top:var(--space-4)">
+        <div class="card">
+          <h3 style="margin-top:0; text-align:center">State Bank of India – Bhinmal</h3>
+          <p><strong>Account Name:</strong> Shri Jivdaya Gaushala Bhinmal</p>
+          <p><strong>S/B A/C:</strong> <span id="sbi-ac">30394883991</span>
+            <button class="btn btn-outline small" onclick="copy('#sbi-ac')" data-i18n="copy">Copy</button></p>
+          <p><strong>IFSC:</strong> <span id="sbi-ifsc">SBIN0011307</span>
+            <button class="btn btn-outline small" onclick="copy('#sbi-ifsc')" data-i18n="copy">Copy</button></p>
         </div>
-
-        <p class="help" style="margin-top:var(--space-4)" data-i18n="donate_disclaimer">
-          For 80G/receipt needs, ensure you enter your full name, email, phone, and address in the form.
-        </p>
-      </div>
-    </section>
-
-    <!-- Donation intent form -->
-    <section class="section">
-      <div class="container">
-        <h2 data-i18n="donate_form_title">Donation Intent Form</h2>
-
-        <form id="donation-form" class="form two-col" novalidate>
-          <div class="input">
-            <label for="d-name" data-i18n="donate_name">Full Name</label>
-            <input id="d-name" name="name" autocomplete="name" required />
-          </div>
-          <div class="input">
-            <label for="d-email" data-i18n="donate_email">Email</label>
-            <input id="d-email" type="email" name="email" autocomplete="email" required />
-          </div>
-          <div class="input">
-            <label for="d-phone" data-i18n="donate_phone">Phone</label>
-            <input id="d-phone" name="phone" inputmode="tel" autocomplete="tel" required />
-          </div>
-          <div class="input">
-            <label for="d-pan" data-i18n="donate_pan">PAN (optional)</label>
-            <input id="d-pan" name="pan" />
-          </div>
-          <div class="input" style="grid-column:1 / -1">
-            <label for="d-address" data-i18n="donate_address">Address</label>
-            <textarea id="d-address" name="address" rows="3" required></textarea>
-          </div>
-          <div class="input">
-            <label for="d-amount" data-i18n="donate_amount">Amount (₹)</label>
-            <input id="d-amount" name="amount" type="number" min="1" step="1" required />
-          </div>
-          <div class="input">
-            <label for="d-purpose" data-i18n="donate_purpose">Purpose</label>
-            <select id="d-purpose" name="purpose">
-              <option data-i18n="donate_one_time">One-time</option>
-              <option data-i18n="donate_monthly">Monthly</option>
-              <option data-i18n="donate_sponsor">Sponsor a Cow</option>
-              <option data-i18n="donate_feed">Feed for a Day</option>
-              <option data-i18n="donate_medical">Medical Care</option>
-              <option data-i18n="donate_tree">Plant a Tree</option>
-            </select>
-          </div>
-
-          <div style="grid-column:1 / -1; display:flex; gap:var(--space-3); justify-content:center;">
-            <button type="submit" class="btn btn-primary" data-i18n="donate_submit">Submit</button>
-            <button type="reset" class="btn btn-outline">Clear</button>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <!-- FAQs -->
-    <section class="section">
-      <div class="container">
-        <h2 data-i18n="faq_title">FAQs</h2>
-        <div class="accordion prose">
-          <details>
-            <summary data-i18n="faq_how">How to donate?</summary>
-            <p data-i18n="faq_how_ans">Choose a method above and inform us via the form.</p>
-          </details>
-          <details>
-            <summary data-i18n="faq_receipt">When will I get the receipt?</summary>
-            <p data-i18n="faq_receipt_ans">Receipts are issued within 15 working days.</p>
-          </details>
-          <details>
-            <summary data-i18n="faq_refund">Refund/Cancellation policy?</summary>
-            <p data-i18n="faq_refund_ans">Donations are final. For mistakes, contact us within 48 hours.</p>
-          </details>
-          <details>
-            <summary data-i18n="faq_docs">12A/80G/FCRA?</summary>
-            <p data-i18n="faq_docs_ans">TBD/Collect docs.</p>
-          </details>
+        <div class="card">
+          <h3 style="margin-top:0; text-align:center">Union Bank of India – Bhinmal</h3>
+          <p><strong>Account Name:</strong> Shri Jivdaya Gaushala Bhinmal</p>
+          <p><strong>Current A/C:</strong> <span id="ubi-ac">749201010050035</span>
+            <button class="btn btn-outline small" onclick="copy('#ubi-ac')" data-i18n="copy">Copy</button></p>
+          <p><strong>IFSC:</strong> <span id="ubi-ifsc">UBIN0574929</span>
+            <button class="btn btn-outline small" onclick="copy('#ubi-ifsc')" data-i18n="copy">Copy</button></p>
         </div>
       </div>
-    </section>
-  </main>
+      <p class="help" style="margin-top:var(--space-4)" data-i18n="donate_disclaimer">
+        For 80G/receipt needs, ensure you enter your full name, email, phone, and address in the form.
+      </p>
+    </div>
+  </section>
+
+  <!-- DONATION INTENT FORM -->
+  <section class="section">
+    <div class="container">
+      <h2 data-i18n="donate_form_title">Donation Intent Form</h2>
+      <form id="donation-form" class="form">
+        <div class="input">
+          <label for="d-name" data-i18n="donate_name">Name</label>
+          <input id="d-name" name="name" required>
+        </div>
+        <div class="input">
+          <label for="d-email" data-i18n="donate_email">Email</label>
+          <input id="d-email" type="email" name="email" required>
+        </div>
+        <div class="input">
+          <label for="d-phone" data-i18n="donate_phone">Phone</label>
+          <input id="d-phone" name="phone" required>
+        </div>
+        <div class="input">
+          <label for="d-address" data-i18n="donate_address">Address</label>
+          <textarea id="d-address" name="address" required></textarea>
+        </div>
+        <div class="input">
+          <label for="d-pan" data-i18n="donate_pan">PAN (optional)</label>
+          <input id="d-pan" name="pan">
+        </div>
+        <div class="input">
+          <label for="d-amount" data-i18n="donate_amount">Amount (₹)</label>
+          <input id="d-amount" name="amount" type="number" min="1" required>
+        </div>
+        <div class="input">
+          <label for="d-purpose" data-i18n="donate_purpose">Purpose</label>
+          <select id="d-purpose" name="purpose">
+            <option data-i18n="donate_one_time">One-time</option>
+            <option data-i18n="donate_monthly">Monthly</option>
+            <option data-i18n="donate_feed">Feed for a Day</option>
+            <option data-i18n="donate_medical">Medical Care</option>
+            <option data-i18n="donate_tree">Plant a Tree</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" data-i18n="donate_submit">Submit</button>
+      </form>
+    </div>
+  </section>
+</main>
+
 
   <!-- Footer injected by app.js -->
   <footer id="site-footer"></footer>
@@ -184,5 +149,59 @@
     }
   }
   </script>
+  <!-- Chart.js (CDN) -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+
+<script defer>
+document.addEventListener('DOMContentLoaded', () => {
+  const el = document.getElementById('expensesChart');
+  if (!el || !window.Chart) return;
+
+  const total = 105000; // ₹1.05 lakh
+  const breakdown = [
+    { label: 'Green & Dry Fodder', value: 0.65 },
+    { label: 'Medical Care', value: 0.15 },
+    { label: 'Staff & Caretakers', value: 0.10 },
+    { label: 'Utilities & Maintenance', value: 0.07 },
+    { label: 'Upkeep & Contingency', value: 0.03 }
+  ];
+  const amounts = breakdown.map(d => Math.round(d.value * total));
+  const labels = breakdown.map(d => `${d.label} (₹${amounts.shift()?.toLocaleString('en-IN')})`);
+
+  // rebuild amounts after shift:
+  const amounts2 = [
+    Math.round(0.65 * total),
+    Math.round(0.15 * total),
+    Math.round(0.10 * total),
+    Math.round(0.07 * total),
+    Math.round(0.03 * total)
+  ];
+
+  new Chart(el, {
+    type: 'pie',
+    data: {
+      labels,
+      datasets: [{
+        data: amounts2
+        // Chart.js will pick default colors. You can set a custom palette if you want.
+      }]
+    },
+    options: {
+      plugins: {
+        legend: { position: 'bottom' },
+        tooltip: {
+          callbacks: {
+            label: (ctx) => {
+              const v = ctx.parsed || 0;
+              return `${ctx.label}: ₹${v.toLocaleString('en-IN')}`;
+            }
+          }
+        }
+      }
+    }
+  });
+});
+</script>
+
 </body>
 </html>
