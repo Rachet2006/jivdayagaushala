@@ -293,3 +293,30 @@ footer a{ color:#fff; }
     height: auto; 
   }
 }
+/* --- Header mobile: logo center, hamburger right --- */
+@media (max-width: 768px) {
+  .nav {
+    justify-content: center;
+    position: relative;
+  }
+
+  /* center logo */
+  .nav .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* move hamburger to right */
+  .menu-toggle {
+    position: absolute;
+    right: var(--space-4);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* keep nav links full width dropdown */
+  .nav-links {
+    width: 100%;
+  }
+}
