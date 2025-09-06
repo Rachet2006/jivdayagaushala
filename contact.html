@@ -2,169 +2,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact – Shri Jivdaya Gaushala, Bhinmal</title>
-  <meta name="description" content="Reach out to Shri Jivdaya Gaushala.">
-  <meta property="og:title" content="Contact – Shri Jivdaya Gaushala, Bhinmal">
-  <meta property="og:description" content="Reach out to Shri Jivdaya Gaushala.">
-  <meta property="og:image" content="assets/img/hero-placeholder.svg">
-  <meta property="og:type" content="website">
-  <link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="https://fonts.gstatic.com/s/notosansdevanagari/v1/NotoSansDevanagari-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <meta name="description" content="Reach out to Shri Jivdaya Gaushala." />
+  <meta property="og:title" content="Contact – Shri Jivdaya Gaushala, Bhinmal" />
+  <meta property="og:description" content="Reach out to Shri Jivdaya Gaushala." />
+  <meta property="og:image" content="assets/img/hero-placeholder.svg" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
   <script src="assets/js/app.js" defer></script>
 </head>
 <body>
-<a href="#main-content" class="skip-link">Skip to content</a>
-<header id="site-header" class="header"></header>
-<main id="main-content">
-  <section class="section">
-    <div class="container">
-      <h1 data-i18n="contact_title">Contact</h1>
-      <div class="contact-cards">
-        <div class="card">
-          <h3 data-i18n="role_president">President</h3>
-          <p>Mohan Ji Seth — 941415176 (owner to verify digits)</p>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <!-- Header injected by app.js -->
+  <header id="site-header" class="header"></header>
+
+  <main id="main-content">
+    <section class="section">
+      <div class="container">
+        <h1 data-i18n="contact_title">Contact</h1>
+
+        <div class="contact-cards">
+          <div class="card">
+            <h3 data-i18n="role_president">President</h3>
+            <p>
+              <strong>Mohan Ji Seth</strong> — 
+              <a href="tel:+91941415176">941415176</a>
+              <span class="help">(owner to verify digits)</span>
+            </p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="role_vpresident">Vice President</h3>
+            <p><strong>Praveen B. Bhansali</strong> — <a href="tel:+919869994285">9869994285</a></p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="role_secretary">Secretary</h3>
+            <p><strong>Madanraj V. Jain</strong> — <a href="tel:+919784208384">9784208384</a></p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="role_treasurer">Treasurer</h3>
+            <p><strong>Prithviraj T. Kavedhi</strong> — <a href="tel:+918369482255">8369482255</a></p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="role_joint_secretary">Joint Secretary</h3>
+            <p><strong>Dinesh G. Seth</strong> — <a href="tel:+918058693360">8058693360</a></p>
+          </div>
         </div>
-        <div class="card">
-          <h3 data-i18n="role_vpresident">Vice President</h3>
-          <p>Praveen B. Bhansali — 9869994285</p>
-        </div>
-        <div class="card">
-          <h3 data-i18n="role_secretary">Secretary</h3>
-          <p>Madanraj V. Jain — 9784208384</p>
-        </div>
-        <div class="card">
-          <h3 data-i18n="role_treasurer">Treasurer</h3>
-          <p>Prithviraj T. Kavedhi — 8369482255</p>
-        </div>
-        <div class="card">
-          <h3 data-i18n="role_joint_secretary">Joint Secretary</h3>
-          <p>Dinesh G. Seth — 8058693360</p>
-        </div>
+
+        <p style="margin-top: var(--space-4); text-align:center;">
+          <a href="#" class="btn btn-outline" data-i18n="cta_whatsapp">WhatsApp</a>
+        </p>
+
+        <h2 data-i18n="contact_form_title">Contact Form</h2>
+        <form id="contact-form" class="form two-col" novalidate>
+          <div class="input">
+            <label for="c-name" data-i18n="donate_name">Full Name</label>
+            <input id="c-name" name="name" autocomplete="name" required />
+          </div>
+          <div class="input">
+            <label for="c-email" data-i18n="donate_email">Email</label>
+            <input id="c-email" type="email" name="email" autocomplete="email" required />
+          </div>
+          <div class="input">
+            <label for="c-phone" data-i18n="donate_phone">Phone</label>
+            <input id="c-phone" name="phone" inputmode="tel" autocomplete="tel" required />
+            <span class="help" data-i18n="help_phone">Include country code if outside India.</span>
+          </div>
+          <div class="input" style="grid-column: 1 / -1;">
+            <label for="c-msg" data-i18n="form_message">Message</label>
+            <textarea id="c-msg" name="message" rows="5"></textarea>
+          </div>
+          <div style="grid-column: 1 / -1; display:flex; gap:var(--space-3); justify-content:center;">
+            <button type="submit" class="btn btn-primary" data-i18n="donate_submit">Submit</button>
+            <button type="reset" class="btn btn-outline">Clear</button>
+          </div>
+        </form>
       </div>
-      <p><a href="#" class="btn btn-outline" data-i18n="cta_whatsapp">WhatsApp</a></p>
-      <h2 data-i18n="contact_form_title">Contact Form</h2>
-      <form id="contact-form" class="form">
-        <div class="input">
-          <label for="c-name" data-i18n="donate_name"></label>
-          <input id="c-name" name="name" required>
-        </div>
-        <div class="input">
-          <label for="c-email" data-i18n="donate_email"></label>
-          <input id="c-email" type="email" name="email" required>
-        </div>
-        <div class="input">
-          <label for="c-phone" data-i18n="donate_phone"></label>
-          <input id="c-phone" name="phone" required>
-          <span class="help" data-i18n="help_phone"></span>
-        </div>
-        <div class="input">
-          <label for="c-msg" data-i18n="form_message"></label>
-          <textarea id="c-msg" name="message"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" data-i18n="donate_submit">Submit</button>
-      </form>
+    </section>
+  </main>
+
+  <!-- Footer injected by app.js -->
+  <footer id="site-footer"></footer>
+
+  <noscript>
+    <div class="banner container" style="margin: 1rem auto">
+      JavaScript is disabled. Content is shown in English. Enable JS to use the language toggle.
     </div>
-  </section>
-</main>
-<footer id="site-footer"></footer>
-  <section class="section container">
-    <h1 data-i18n="contact_title"></h1>
-    <div class="contact-cards">
-      <div class="card">
-        <h3 data-i18n="role_president"></h3>
-        <p>Mohan Ji Seth — 941415176 (owner to verify digits)</p>
-      </div>
-      <div class="card">
-        <h3 data-i18n="role_vpresident"></h3>
-        <p>Praveen B. Bhansali — 9869994285</p>
-      </div>
-      <div class="card">
-        <h3 data-i18n="role_secretary"></h3>
-        <p>Madanraj V. Jain — 9784208384</p>
-      </div>
-      <div class="card">
-        <h3 data-i18n="role_treasurer"></h3>
-        <p>Prithviraj T. Kavedhi — 8369482255</p>
-      </div>
-      <div class="card">
-        <h3 data-i18n="role_joint_secretary"></h3>
-        <p>Dinesh G. Seth — 8058693360</p>
-      </div>
-    </div>
-    <p><a href="#" class="btn btn-outline" data-i18n="cta_whatsapp"></a></p>
-    <h2 data-i18n="contact_form_title"></h2>
-    <form id="contact-form" class="form">
-      <div class="input">
-        <label for="c-name" data-i18n="donate_name"></label>
-        <input id="c-name" name="name" required>
-      </div>
-      <div class="input">
-        <label for="c-email" data-i18n="donate_email"></label>
-        <input id="c-email" type="email" name="email" required>
-      </div>
-      <div class="input">
-        <label for="c-phone" data-i18n="donate_phone"></label>
-        <input id="c-phone" name="phone" required>
-        <span class="help" data-i18n="help_phone"></span>
-      </div>
-      <div class="input">
-        <label for="c-msg" data-i18n="form_message"></label>
-        <textarea id="c-msg" name="message"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary" data-i18n="donate_submit"></button>
-    </form>
-  </section>
-<header id="site-header"></header>
-<main id="main-content">
-  <h1 data-i18n="contact_title"></h1>
-  <ul>
-    <li>President: Mohan Ji Seth — 941415176 (owner to verify digits)</li>
-    <li>Vice President: Praveen B. Bhansali — 9869994285</li>
-    <li>Secretary: Madanraj V. Jain — 9784208384</li>
-    <li>Treasurer: Prithviraj T. Kavedhi — 8369482255</li>
-    <li>Joint Secretary: Dinesh G. Seth — 8058693360</li>
-  </ul>
-  <p><a href="#" class="btn-secondary">WhatsApp</a></p>
-  <h2 data-i18n="contact_form_title"></h2>
-  <form id="contact-form">
-    <div class="form-group">
-      <label for="c-name" data-i18n="donate_name"></label>
-      <input id="c-name" name="name" required>
-    </div>
-    <div class="form-group">
-      <label for="c-email" data-i18n="donate_email"></label>
-      <input id="c-email" type="email" name="email" required>
-    </div>
-    <div class="form-group">
-      <label for="c-phone" data-i18n="donate_phone"></label>
-      <input id="c-phone" name="phone" required>
-    </div>
-    <div class="form-group">
-      <label for="c-msg">Message</label>
-      <textarea id="c-msg" name="message"></textarea>
-    </div>
-    <button type="submit" class="btn-primary" data-i18n="donate_submit"></button>
-  </form>
-</main>
-<footer id="site-footer"></footer>
-<script src="assets/js/app.js"></script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NGO",
-  "name": "Shri Jivdaya Gaushala, Bhinmal",
-  "url": "https://example.org",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Bhinmal",
-    "addressRegion": "Rajasthan",
-    "addressCountry": "IN"
+  </noscript>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "Shri Jivdaya Gaushala, Bhinmal",
+    "url": "https://rachet2006.github.io/jivdayagaushala/contact.html",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bhinmal",
+      "addressRegion": "Rajasthan",
+      "addressCountry": "IN"
+    }
   }
-}
-</script>
+  </script>
 </body>
 </html>
