@@ -34,12 +34,15 @@ const i18n = {
     stat_trees_label: "shade-giving trees",
     stat_cost_value: "₹1.05L",
     stat_cost_label: "daily running cost",
+
+    /* Fast facts – detailed lines */
     fact_years: "80+ years of service",
-    fact_animals: "~{animals_total} animals (cows, bulls, goats, sheep, buffaloes, mares)",
+    fact_animals:
+      "~{animals_total} animals (cows, bulls, goats, sheep, buffaloes, mares)",
     fact_wards: "{wards} animal wards",
     fact_hospital: "{hospital} animal hospital",
     fact_fodder: "{fodder_halls} dry-fodder halls",
-    fact_borewell: "{borewells} borewells + {dharam_kanta} dharam-kanta (weighbridge)",
+    fact_borewell: "2 borewells + 1 dharam-kanta (weighbridge)",
     fact_trees: "~{trees} shade-giving trees (neem, khejri, sisam)",
     fact_trees_goal: "Goal: +{trees_goal_per_year} trees/year",
     fact_trees_planted: "~{trees_planted_2024_2025} planted in 2024–25",
@@ -49,27 +52,31 @@ const i18n = {
     /* About */
     about_title: "About Us",
     about_history:
-      "First Gaushala of Jalore district; serving mute, abandoned, injured animals for 80+ years in holy town Bhinmal (Marwar, Rajasthan).",
+      "First Gaushala of Jalore district; serving mute, abandoned, and injured animals for 80+ years in the holy town of Bhinmal (Marwar, Rajasthan).",
     about_campuses: "Campuses/areas:",
     about_mirpura: "Mirpura Gaushala: ~500 bigha",
     about_panch: "Panch Kuwa Gaushala: ~180 bigha",
     about_residents: "Combined residents: ~2,150 animals.",
     about_facilities:
-      "Facilities include wards, hospital, fodder halls, staff quarters, saints’ stay, birdhouse & chabutra, water infrastructure.",
+      "Facilities include wards, hospital, fodder halls, staff quarters, saints’ stay, birdhouse & chabutra, and water infrastructure.",
 
-    /* Work */
+    /* Work (unchanged labels used elsewhere) */
     work_title: "Our Work",
     work_care: "Animal Care",
     work_care_desc:
-      "Cows, bulls, goats, sheep, buffaloes, mares; rescued from abandonment or slaughter; peaceful habitat.",
+      "Cows, bulls, goats, sheep, buffaloes, mares—rescued from abandonment or slaughter—living in a peaceful habitat.",
     work_medical: "Medical & Hospital",
-    work_medical_desc: "On-site treatment and care for injured or sick animals.",
+    work_medical_desc:
+      "On-site treatment and care for injured or sick animals.",
     work_feed: "Feeding & Nutrition",
-    work_feed_desc: "Daily dry + green fodder; lapsi on festivals.",
+    work_feed_desc:
+      "Daily dry + green fodder; lapsi on festivals.",
     work_green: "Green Drive",
-    work_green_desc: "1,000+ trees; +100/year; 250 planted in 2024–25.",
+    work_green_desc:
+      "1,000+ trees; +100/year; 250 planted in 2024–25.",
     work_infra: "Infrastructure",
-    work_infra_desc: "Wards, fodder halls, borewells, dharam-kanta.",
+    work_infra_desc:
+      "Wards, fodder halls, borewells, dharam-kanta.",
 
     /* Donate */
     donate_title: "Donate",
@@ -99,11 +106,14 @@ const i18n = {
 
     /* Visit / Volunteer */
     visit_title: "Visit & Volunteer",
-    visit_hours: "Visiting hours: TBD",
-    visit_guidelines: "Follow safety & hygiene guidelines during visit.",
-    volunteer_roles: "Volunteer roles include animal care, plantation, awareness drives.",
+    visit_hours: "Visiting hours: 9:00 AM – 5:00 PM",
+    visit_guidelines:
+      "Please follow safety and hygiene guidelines during your visit and kindly follow staff instructions around animal wards.",
+    volunteer_roles:
+      "Volunteer roles include animal care assistance, plantation, fodder distribution, and awareness drives.",
     volunteer_form_title: "Volunteer Form",
-    volunteer_success: "Thank you for your interest! We'll get in touch.",
+    volunteer_success:
+      "Thank you for your interest! We'll get in touch.",
     map_placeholder: "Map placeholder",
 
     /* Gallery */
@@ -124,7 +134,7 @@ const i18n = {
 
     /* Footer / misc */
     footer_motto: "Made with ♥ for animals",
-    footer_address: "Address: Mirpura Road, Bhinmal, Rajasthan (placeholder)",
+    footer_address: "Address: Mirpura Road, Bhinmal, Jalore, Rajasthan",
     footer_quick_links: "Quick Links",
     footer_social: "Connect",
     copy: "Copy",
@@ -155,7 +165,7 @@ const i18n = {
     /* Hero / facts */
     hero_title: "श्री जीवदया गौशाला, भीनमाल में आपका स्वागत है",
     hero_intro:
-      "करुणा की शरणस्थली—80 वर्षों से सेवा। जालौर जिले की प्रथम गौशाला के रूप में, हम 2,150+ पशुओं की हरियाली और सम्मानपूर्ण देखभाल करते हैं।",
+      "करुणा की शरणस्थली—80 वर्षों से सेवा। जालौर जिले की प्रथम गौशाला के रूप में, हम 2,150+ पशुओं की हरियाली और सम्मानपूर्ण देखभाल करते हैं—चिकित्सा, पौष्टिक आहार और प्रत्येक जीवन के सम्मान के साथ।",
     hero_cta_donate: "अभी दान करें",
     hero_cta_visit: "भेंट/सेवा करें",
     fastfacts_title: "त्वरित तथ्य",
@@ -173,77 +183,86 @@ const i18n = {
     stat_trees_label: "छायादार वृक्ष",
     stat_cost_value: "₹1.05लाख",
     stat_cost_label: "दैनिक व्यय",
+
+    /* Fast facts – detailed lines */
     fact_years: "80+ वर्षों की सेवा",
-    fact_animals: "~{animals_total} पशु (गाय, बैल, बकरी, भेड़, भैंस, घोड़ी)",
+    fact_animals:
+      "~{animals_total} पशु (गाय, बैल, बकरी, भेड़, भैंस, घोड़ी)",
     fact_wards: "{wards} पशु वार्ड",
     fact_hospital: "{hospital} पशु अस्पताल",
     fact_fodder: "{fodder_halls} सूखा चारा हॉल",
-    fact_borewell: "{borewells} बोरवेल + {dharam_kांटा} धर्मकांटा",
+    fact_borewell: "2 बोरवेल + 1 धर्मकांटा (वेजब्रिज)",
     fact_trees: "~{trees} छायादार वृक्ष (नीम, खेजड़ी, सिसम)",
     fact_trees_goal: "लक्ष्य: +{trees_goal_per_year} वृक्ष/वर्ष",
     fact_trees_planted: "~{trees_planted_2024_2025} वृक्ष 2024–25 में",
     fact_feeding:
-      "दैनिक भोजन: सूखा चारा + 1–2 ट्रक हरा चारा; विशेष दिनों में लापसी",
+      "दैनिक भोजन: सूखा चारा + 1–2 ट्रक हरा चारा; शुभ दिनों में लापसी",
 
     /* About */
     about_title: "हमारे बारे में",
     about_history:
-      "जालौर जिले की प्रथम गौशाला; 80+ वर्षों से भीनमाल में अबोल, परित्यक्त, घायल पशुओं की सेवा।",
+      "जालौर जिले की प्रथम गौशाला; पवित्र नगरी भीनमाल (मारवाड़, राजस्थान) में 80+ वर्षों से अबोल, परित्यक्त और घायल पशुओं की सेवा।",
     about_campuses: "परिसर/क्षेत्र:",
     about_mirpura: "मीरपुरा गौशाला: ~500 बीघा",
-    about_panch: "पांच कुआं गौशाला: ~180 बीघा",
+    about_panch: "पांच कुआँ गौशाला: ~180 बीघा",
     about_residents: "कुल निवासियों: ~2,150 पशु।",
     about_facilities:
-      "सुविधाएँ: वार्ड, अस्पताल, चारा हॉल, स्टाफ क्वार्टर, संत निवास, पक्षीघर व चबूतरा, जल संरचना।",
+      "सुविधाएँ: वार्ड, अस्पताल, चारा हॉल, स्टाफ क्वार्टर, संत निवास, पक्षीघर व चबूतरा, तथा जल संरचना।",
 
     /* Work */
     work_title: "हमारा कार्य",
     work_care: "पशु देखभाल",
     work_care_desc:
-      "गाय, बैल, बकरी, भेड़, भैंस, घोड़ी; परित्यक्त या वध से बचाए गए; शांत आवास।",
+      "गाय, बैल, बकरी, भेड़, भैंस, घोड़ी—परित्यक्त या वध से बचाए गए—शांत वातावरण में।",
     work_medical: "चिकित्सा व अस्पताल",
-    work_medical_desc: "घायल या बीमार पशुओं का स्थल पर उपचार।",
+    work_medical_desc:
+      "घायल व बीमार पशुओं का स्थल पर उपचार।",
     work_feed: "भोजन व पोषण",
-    work_feed_desc: "दैनिक सूखा + हरा चारा; त्योहारों पर लापसी।",
+    work_feed_desc:
+      "दैनिक सूखा + हरा चारा; त्योहारों पर लापसी।",
     work_green: "हरित अभियान",
-    work_green_desc: "1,000+ वृक्ष; +100/वर्ष; 2024–25 में 250 लगाए।",
+    work_green_desc:
+      "1,000+ वृक्ष; +100/वर्ष; 2024–25 में 250 लगाए।",
     work_infra: "बुनियादी ढांचा",
-    work_infra_desc: "वार्ड, चारा हॉल, बोरवेल, धर्मकांटा।",
+    work_infra_desc:
+      "वार्ड, चारा हॉल, बोरवेल, धर्मकांटा।",
 
     /* Donate */
     donate_title: "दान",
     donate_intro:
-      "पर्युषण जैसे पावन दिनों सहित पूरे वर्ष, आपका सहयोग दो हजार से अधिक प्राणियों का सहारा है। दैनिक व्यय लगभग ₹1.05 लाख।",
+      "पर्युषण जैसे पावन दिनों सहित पूरे वर्ष, आपका सहयोग दो हजार से अधिक प्राणियों का सहारा है। गौशाला का दैनिक व्यय लगभग ₹1.05 लाख है।",
     donate_disclaimer:
-      "80G/रसीद हेतु कृपया फॉर्म में पूरा नाम, ईमेल, फोन, पता भरें।",
+      "80G/रसीद हेतु कृपया फॉर्म में अपना पूरा नाम, ईमेल, फोन और पता अवश्य भरें।",
     donate_options: "दान विकल्प",
     donate_one_time: "एकमुश्त",
     donate_monthly: "मासिक",
     donate_sponsor: "एक गाय गोद लें",
     donate_feed: "एक दिन का भोजन",
     donate_medical: "चिकित्सा सहायता",
-    donate_tree: "वृक्ष लगाएं",
+    donate_tree: "वृक्ष लगाएँ",
     donate_bank: "बैंक ट्रांसफर विवरण",
     donate_form_title: "दान अभिरुचि फॉर्म",
     donate_name: "नाम",
     donate_email: "ईमेल",
-    donate_phone: "फोन",
+    donate_phone: "फ़ोन",
     donate_address: "पता",
     donate_pan: "PAN (वैकल्पिक)",
     donate_amount: "राशि (₹)",
     donate_purpose: "उद्देश्य",
     donate_submit: "जमा करें",
     donate_success:
-      "धन्यवाद! हमने आपकी अभिरुचि सहेज ली है। टीम आपसे संपर्क करेगी।",
+      "धन्यवाद! आपकी अभिरुचि सहेज ली गई है। टीम शीघ्र ही संपर्क करेगी।",
 
     /* Visit / Volunteer */
     visit_title: "भेंट व सेवा",
-    visit_hours: "भेंट समय: TBD",
-    visit_guidelines: "भेंट के दौरान सुरक्षा व स्वच्छता निर्देशों का पालन करें।",
-    volunteer_roles: "सेवा भूमिकाएँ: पशु देखभाल, वृक्षारोपण, जागरूकता अभियान।",
+    visit_hours: "भेंट समय: सुबह 9:00 – शाम 5:00",
+    visit_guidelines:
+      "भेंट के दौरान सुरक्षा व स्वच्छता निर्देशों का पालन करें और पशु वार्ड के पास स्टाफ के निर्देशों का सम्मान करें।",
+    volunteer_roles:
+      "सेवा भूमिकाएँ: पशु देखभाल, वृक्षारोपण, चारा वितरण और जागरूकता अभियान।",
     volunteer_form_title: "सेवक फॉर्म",
     volunteer_success: "रुचि के लिए धन्यवाद! हम संपर्क करेंगे।",
-    map_placeholder: "मानचित्र प्लेसहोल्डर",
+    map_placeholder: "मानचित्र",
 
     /* Gallery */
     gallery_title: "गैलरी",
@@ -263,12 +282,12 @@ const i18n = {
 
     /* Footer / misc */
     footer_motto: "जानवरों के लिए प्रेम से बनाया गया",
-    footer_address: "पता: मीरपुरा रोड, भीनमाल, राजस्थान (placeholder)",
+    footer_address: "पता: मीरपुरा रोड, भीनमाल, जालौर, राजस्थान",
     footer_quick_links: "त्वरित लिंक",
     footer_social: "सोशल",
     copy: "कॉपी",
     copied: "कॉपी हो गया!",
-    help_phone: "हम केवल समन्वय हेतु उपयोग करेंगे।",
+    help_phone: "हम इसे केवल आपके भेंट समन्वय हेतु उपयोग करेंगे।",
     form_message: "संदेश",
     cta_whatsapp: "व्हाट्सऐप",
     role_president: "अध्यक्ष",
