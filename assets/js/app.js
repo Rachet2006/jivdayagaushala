@@ -321,27 +321,55 @@ document.addEventListener("DOMContentLoaded", () => {
 function renderHeaderFooter() {
   const header = document.getElementById("site-header");
   if (header) {
-    header.innerHTML = `
-      <nav class="nav container" aria-label="Primary">
-        <a href="index.html" class="logo" aria-label="Home">
-          <img src="assets/img/logo.svg" alt="Logo" width="40" height="40" />
-        </a>
-        <div class="nav-links">
-          <a href="index.html" data-i18n="nav_home">Home</a>
-          <a href="about-work.html" data-i18n="nav_about">About</a>
-          <a href="gallery.html" data-i18n="nav_gallery">Gallery</a>
-          <a href="donate.html" data-i18n="nav_donate">Donate</a>
-          <a href="visit-volunteer.html" data-i18n="nav_visit">Visit / Volunteer</a>
-          <a href="contact.html" data-i18n="nav_contact">Contact</a>
-          <a href="legal.html" data-i18n="nav_legal">Legal</a>
-        </div>
-        <div class="lang-switch" aria-label="Language">
-          <button class="lang-toggle" data-lang="en" data-i18n="lang_label_en">EN</button>
-          |
-          <button class="lang-toggle" data-lang="hi" data-i18n="lang_label_hi">हिन्दी</button>
-        </div>
-      </nav>
-    `;
+   header.innerHTML = `
+    <nav class="nav container" aria-label="Primary">
+      <a href="index.html" class="logo" aria-label="Home">
+        <img src="assets/img/logo.svg" alt="Logo" width="40" height="40" />
+      </a>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-controls="primary-links" aria-expanded="false">☰</button>
+      <div class="nav-links" id="primary-links">
+        <a href="index.html" data-i18n="nav_home">Home</a>
+        <a href="about-work.html" data-i18n="nav_about">About</a>
+        <a href="gallery.html" data-i18n="nav_gallery">Gallery</a>
+        <a href="donate.html" data-i18n="nav_donate">Donate</a>
+        <a href="visit-volunteer.html" data-i18n="nav_visit">Visit / Volunteer</a>
+        <a href="contact.html" data-i18n="nav_contact">Contact</a>
+        <a href="legal.html" data-i18n="nav_legal">Legal</a>
+      </div>
+      <div class="lang-switch" aria-label="Language">
+        <button class="lang-toggle" data-lang="en" data-i18n="lang_label_en">EN</button> |
+        <button class="lang-toggle" data-lang="hi" data-i18n="lang_label_hi">हिन्दी</button>
+      </div>
+    </nav>
+  `;
+  }
+  
+  // Mobile menu toggle
+  const menuBtn = document.querySelector(".menu-toggle");
+  const links = document.getElementById("primary-links");
+  
+  if (menuBtn && links) {
+    menuBtn.addEventListener("click", () => {
+      const isOpen = links.classList.toggle("active");
+      menuBtn.setAttribute("aria-expanded", String(isOpen));
+    });
+  
+    // Auto-close on link click (nice for phones)
+    links.addEventListener("click", (e) => {
+      const target = e.target;
+      if (target.tagName === "A" && links.classList.contains("active")) {
+        links.classList.remove("active");
+        menuBtn.setAttribute("aria-expanded", "false");
+      }
+    });
+  
+    // Close if resizing to desktop
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 768 && links.classList.contains("active")) {
+        links.classList.remove("active");
+        menuBtn.setAttribute("aria-expanded", "false");
+      }
+    });
   }
 
   const footer = document.getElementById("site-footer");
@@ -357,8 +385,7 @@ function renderHeaderFooter() {
           <h3 data-i18n="footer_quick_links">Quick Links</h3>
           <ul>
             <li><a href="index.html" data-i18n="nav_home">Home</a></li>
-            <li><a href="about.html" data-i18n="nav_about">About</a></li>
-            <li><a href="work.html" data-i18n="nav_work">Our Work</a></li>
+            <li><a href="about-work.html" data-i18n="nav_about">About</a></li>
             <li><a href="donate.html" data-i18n="nav_donate">Donate</a></li>
           </ul>
         </div>
