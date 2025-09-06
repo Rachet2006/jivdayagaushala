@@ -123,6 +123,8 @@ p,li{ font-size:var(--step-0); }
 
 /* Header / Nav */
 .header{ position:sticky; top:0; z-index:100; backdrop-filter:saturate(180%) blur(6px); }
+.nav { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:.5rem .75rem; }
+.nav .nav-links { display:flex; flex-wrap:wrap; gap:.5rem .75rem; }
 .nav{
   display:flex; align-items:center; justify-content:space-between; gap:.5rem;
   padding:.8rem var(--space-4); background:rgba(255,255,255,.86);
