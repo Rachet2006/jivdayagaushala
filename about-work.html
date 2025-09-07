@@ -32,21 +32,48 @@
   
         <div class="grid grid-2" style="margin-top: var(--space-4);">
           <div class="card">
-            <h3 data-i18n="about_campuses">Campuses &amp; Scale</h3>
+            <h3 data-i18n="campuses_scale_title">Campuses & Scale</h3>
             <ul>
-              <li><strong data-i18n="about_mirpura">Mirpura Gaushala: ~500 bigha</strong></li>
-              <li><strong data-i18n="about_panch">Panch Kuwa Gaushala: ~180 bigha</strong></li>
-              <li data-i18n="about_residents">Residents: ~2,150 animals (cows, bulls, buffaloes, goats, sheep, mares)</li>
+              <li><strong data-i18n="campus_mirpura_new">Mirpura Gaushala: ~{mirpura_bigha} bigha</strong></li>
+              <li><strong data-i18n="campus_panch_new">Panch Kuwa Gaushala: ~{panch_bigha} bigha</strong></li>
             </ul>
           </div>
+        
           <div class="card">
-            <h3 data-i18n="work_infra">Infrastructure</h3>
-            <p data-i18n="about_facilities">
-              15 animal wards • on-site hospital • fodder halls • staff quarters • saints’ stay •
-              birdhouse &amp; chabutra • water infrastructure (2 borewells) • dharam-kanta (weighbridge)
+            <h3 data-i18n="offices_access_title">Offices & Access</h3>
+            <ul>
+              <li data-i18n="office_main">Office: Khari Road, Bhinmal city</li>
+              <li data-i18n="office_branch">Branch office: Panch Kuwa, Karda Road</li>
+              <li data-i18n="access_city_panch">From city: Panch Kuwa – ~5 km</li>
+              <li data-i18n="access_city_mirpura">From city: Mirpura – ~8 km</li>
+            </ul>
+          </div>
+        
+          <div class="card">
+            <h3 data-i18n="development_title">Development Status</h3>
+            <ul>
+              <li data-i18n="dev_panch">Panch Kuwa branch: fully developed</li>
+              <li data-i18n="dev_mirpura">Mirpura side: under development</li>
+            </ul>
+          </div>
+        
+          <div class="card">
+            <h3 data-i18n="infra_util_title">Water & Utilities</h3>
+            <ul>
+              <li data-i18n="infra_tube_panch">{tube_panch} tube wells in Panch Kuwa</li>
+              <li data-i18n="infra_tube_mirpura">{tube_mirpura} tube well in Mirpura</li>
+              <li data-i18n="infra_boundary">Boundary wall ~{boundary_wall_km} km (in progress)</li>
+            </ul>
+          </div>
+        
+          <div class="card" style="grid-column:1 / -1;">
+            <h3 data-i18n="facilities_title_plus">Facilities</h3>
+            <p data-i18n="facilities_points_plus">
+              {staff_quarters} staff quarters • Kabutro ka chabutara (bird platform) • {rest_rooms_main_road} rest rooms on main road
             </p>
           </div>
         </div>
+
   
         <h2 style="margin-top: var(--space-6);" data-i18n="work_title">Our Work</h2>
         <div class="grid grid-3">
