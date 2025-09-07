@@ -137,7 +137,7 @@ const i18n = {
 
     /* Footer / misc */
     footer_motto: "Made with ♥ for animals",
-    footer_address: "Address: Mirpura Road, Bhinmal, Rajasthan (placeholder)",
+    footer_address: "Office: Khari Road, Bhinmal • Branch: Panch Kuwa, Karda Road",
     footer_quick_links: "Quick Links",
     footer_social: "Connect",
     copy: "Copy",
@@ -148,7 +148,30 @@ const i18n = {
     role_vpresident: "Vice President",
     role_secretary: "Secretary",
     role_treasurer: "Treasurer",
-    role_joint_secretary: "Joint Secretary"
+    role_joint_secretary: "Joint Secretary",
+    
+    offices_access_title: "Offices & Access",
+    office_main: "Office: Khari Road, Bhinmal city",
+    office_branch: "Branch office: Panch Kuwa, Karda Road",
+    access_city_panch: "From city: Panch Kuwa – ~5 km",
+    access_city_mirpura: "From city: Mirpura – ~8 km",
+    campuses_scale_title: "Campuses & Scale (updated)",
+    campus_mirpura_new: "Mirpura Gaushala: ~{mirpura_bigha} bigha",
+    campus_panch_new: "Panch Kuwa Gaushala: ~{panch_bigha} bigha",
+    development_title: "Development Status",
+    dev_panch: "Panch Kuwa branch: fully developed",
+    dev_mirpura: "Mirpura side: under development",
+    infra_util_title: "Water & Utilities",
+    infra_tube_panch: "{tube_panch} tube wells in Panch Kuwa",
+    infra_tube_mirpura: "{tube_mirpura} tube well in Mirpura",
+    infra_boundary: "Boundary wall ~{boundary_wall_km} km (in progress)",
+    facilities_title_plus: "Facilities (updated)",
+    facilities_points_plus: "{staff_quarters} staff quarters • Kabutro ka chabutara (bird platform) • {rest_rooms_main_road} rest rooms on main road",
+    how_to_reach_title: "How to Reach",
+    how_to_reach_points_1: "Office: Khari Road, Bhinmal city",
+    how_to_reach_points_2: "Branch: Panch Kuwa, Karda Road",
+    how_to_reach_points_3: "Distance from city: Panch Kuwa ~5 km; Mirpura ~8 km"
+
   },
 
   hi: {
@@ -288,7 +311,7 @@ const i18n = {
 
     /* Footer / misc */
     footer_motto: "जानवरों के लिए प्रेम से बनाया गया",
-    footer_address: "पता: मीरपुरा रोड, भीनमाल, राजस्थान (placeholder)",
+    footer_address: "कार्यालय: खारी रोड, भीनमाल • शाखा: पांच कुआ, करदा रोड",
     footer_quick_links: "त्वरित लिंक",
     footer_social: "सोशल",
     copy: "कॉपी",
@@ -299,7 +322,30 @@ const i18n = {
     role_vpresident: "उपाध्यक्ष",
     role_secretary: "सचिव",
     role_treasurer: "कोषाध्यक्ष",
-    role_joint_secretary: "संयुक्त सचिव"
+    role_joint_secretary: "संयुक्त सचिव",
+
+    offices_access_title: "कार्यालय व पहुँच",
+    office_main: "कार्यालय: खारी रोड, भीनमाल शहर",
+    office_branch: "शाखा कार्यालय: पांच कुआ, करदा रोड",
+    access_city_panch: "शहर से दूरी: पांच कुआ ~5 किमी",
+    access_city_mirpura: "शहर से दूरी: मीरपुरा ~8 किमी",
+    campuses_scale_title: "परिसर व पैमाना (अपडेटेड)",
+    campus_mirpura_new: "मीरपुरा गौशाला: ~{mirpura_bigha} बीघा",
+    campus_panch_new: "पांच कुआ गौशाला: ~{panch_bigha} बीघा",
+    development_title: "विकास स्थिति",
+    dev_panch: "पांच कुआ शाखा: पूर्ण विकसित",
+    dev_mirpura: "मीरपुरा पक्ष: विकासाधीन",
+    infra_util_title: "जल व उपयोगिताएँ",
+    infra_tube_panch: "पांच कुआ में {tube_panch} ट्यूबवेल",
+    infra_tube_mirpura: "मीरपुरा में {tube_mirpura} ट्यूबवेल",
+    infra_boundary: "सीमा दीवार ~{boundary_wall_km} किमी (प्रगति पर)",
+    facilities_title_plus: "सुविधाएँ (अपडेटेड)",
+    facilities_points_plus: "{staff_quarters} स्टाफ क्वार्टर • कबूतरों का चबूतरा • मेन रोड पर {rest_rooms_main_road} विश्राम कक्ष",
+    how_to_reach_title: "कैसे पहुँचें",
+    how_to_reach_points_1: "कार्यालय: खारी रोड, भीनमाल शहर",
+    how_to_reach_points_2: "शाखा: पांच कुआ, करदा रोड",
+    how_to_reach_points_3: "शहर से दूरी: पांच कुआ ~5 किमी; मीरपुरा ~8 किमी"
+
   }
 };
 
