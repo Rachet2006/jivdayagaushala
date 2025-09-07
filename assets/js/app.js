@@ -318,10 +318,58 @@ let siteData = {
   trees_planted_2024_2025: "250"
 };
 
+/* --- Mobile nav hardening for Android/iOS --- */
+function enhanceMobileNav(){
+  const menuBtn = document.querySelector(".menu-toggle");
+  const links   = document.getElementById("primary-links");
+  if (!menuBtn || !links) return;
+
+  const mq = window.matchMedia("(min-width: 769px)");
+
+  function closeMenu() {
+    links.classList.remove("active");
+    menuBtn.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("nav-open");
+  }
+  function toggleMenu() {
+    const isOpen = links.classList.toggle("active");
+    menuBtn.setAttribute("aria-expanded", String(isOpen));
+    document.body.classList.toggle("nav-open", isOpen);
+  }
+
+  // Toggle on click
+  menuBtn.addEventListener("click", toggleMenu);
+
+  // Close on link click (nice for phones)
+  links.addEventListener("click", (e) => {
+    if (e.target.tagName === "A" && links.classList.contains("active")) {
+      closeMenu();
+    }
+  });
+
+  // Close on outside click
+  document.addEventListener("click", (e) => {
+    if (!links.classList.contains("active")) return;
+    const withinNav = e.target.closest(".nav");
+    if (!withinNav) closeMenu();
+  }, { passive: true });
+
+  // Close on Esc
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMenu();
+  });
+
+  // Close when entering desktop breakpoint
+  mq.addEventListener("change", (ev) => {
+    if (ev.matches) closeMenu();
+  });
+}
+
 /* ---------- init ---------- */
 document.addEventListener("DOMContentLoaded", () => {
   renderHeaderFooter();
-
+  enhanceMobileNav();
+  
   // Load dynamic site data if available
   fetch("assets/data/site.json")
     .then((r) => (r.ok ? r.json() : null))
@@ -370,32 +418,6 @@ function renderHeaderFooter() {
   }
   
   // Mobile menu toggle
-  const menuBtn = document.querySelector(".menu-toggle");
-  const links = document.getElementById("primary-links");
-  
-  if (menuBtn && links) {
-    menuBtn.addEventListener("click", () => {
-      const isOpen = links.classList.toggle("active");
-      menuBtn.setAttribute("aria-expanded", String(isOpen));
-    });
-  
-    // Auto-close on link click (nice for phones)
-    links.addEventListener("click", (e) => {
-      const target = e.target;
-      if (target.tagName === "A" && links.classList.contains("active")) {
-        links.classList.remove("active");
-        menuBtn.setAttribute("aria-expanded", "false");
-      }
-    });
-  
-    // Close if resizing to desktop
-    window.addEventListener("resize", () => {
-      if (window.innerWidth > 768 && links.classList.contains("active")) {
-        links.classList.remove("active");
-        menuBtn.setAttribute("aria-expanded", "false");
-      }
-    });
-  }
 
   const footer = document.getElementById("site-footer");
   if (footer) {
