@@ -8,5 +8,12 @@
   "trees": 1000,
   "trees_goal_per_year": 100,
   "trees_planted_2024_2025": 250,
-  "daily_cost_inr": 105000
+  "daily_cost_inr": 105000,
+  "mirpura_bigha": "467",
+  "panch_bigha": "168",
+  "staff_quarters": "14",
+  "tube_panch": "2",
+  "tube_mirpura": "1",
+  "boundary_wall_km": "10",
+  "rest_rooms_main_road": "2"
 }
