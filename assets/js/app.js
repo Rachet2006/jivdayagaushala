@@ -8,7 +8,7 @@ const i18n = {
     nav_about: "About",
     nav_work: "Our Work",
     nav_donate: "Donate",
-    nav_visit: "Visit & Volunteer",
+    nav_visit: "Visit",
     nav_gallery: "Gallery",
     nav_contact: "Contact",
     nav_legal: "Legal",
@@ -20,7 +20,7 @@ const i18n = {
     hero_intro:
       "For over 80 years, Rajasthan’s sanctuary of compassion. As the first Gaushala in Jalore district, we provide lifelong care to 2,150+ animals across vast shelters and green landscapes — ensuring every being receives medical attention, nourishing feed, and dignity.",
     hero_cta_donate: "Donate Now",
-    hero_cta_visit: "Visit / Volunteer",
+    hero_cta_visit: "Visit",
 
     /* Hero stats (uses siteData where possible) */
     stat_animals_value: "~{animals_total}",
@@ -111,14 +111,10 @@ const i18n = {
       "Thank you! We have saved your intent. The team will contact you.",
 
     /* Visit / Volunteer */
-    visit_title: "Visit & Volunteer",
+    visit_title: "Visit",
     visit_hours: "Visiting hours: 9:00 AM – 5:00 PM",
     visit_guidelines:
       "Please follow safety and hygiene guidelines during your visit and kindly follow staff instructions around animal wards.",
-    volunteer_roles:
-      "Volunteer roles include animal care assistance, plantation, fodder distribution, and awareness drives.",
-    volunteer_form_title: "Volunteer Form",
-    volunteer_success: "Thank you for your interest! We'll get in touch.",
     map_placeholder: "Map placeholder",
 
     /* Gallery */
@@ -182,7 +178,7 @@ const i18n = {
     nav_about: "परिचय",
     nav_work: "हमारा कार्य",
     nav_donate: "दान",
-    nav_visit: "भेंट व सेवा",
+    nav_visit: "भेंट",
     nav_gallery: "गैलरी",
     nav_contact: "संपर्क",
     nav_legal: "कानूनी",
@@ -285,7 +281,7 @@ const i18n = {
       "धन्यवाद! आपकी अभिरुचि सहेज ली गई है। टीम शीघ्र संपर्क करेगी।",
 
     /* Visit / Volunteer */
-    visit_title: "भेंट व सेवा",
+    visit_title: "भेंट",
     visit_hours: "भेंट समय: सुबह 9:00 – शाम 5:00",
     visit_guidelines:
       "भेंट के दौरान सुरक्षा व स्वच्छता निर्देशों का पालन करें और पशु वार्डों के पास स्टाफ के निर्देशों का सम्मान करें।",
@@ -456,12 +452,13 @@ function renderHeaderFooter() {
     
       <!-- Center logo (desktop & mobile) -->
       <a href="index.html" class="logo" aria-label="Home">
-        <img src="assets/img/logo.svg" alt="Logo" width="64" height="64" />
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span class="sr-only">Home</span>
       </a>
     
       <!-- DESKTOP: right group -->
       <div class="nav-group nav-right">
-        <a href="visit-volunteer.html" data-i18n="nav_visit">Visit / Volunteer</a>
+        <a href="visit.html" data-i18n="nav_visit">Visit</a>
         <a href="contact.html" data-i18n="nav_contact">Contact</a>
         <a href="legal.html" data-i18n="nav_legal">Legal</a>
       </div>
@@ -478,7 +475,7 @@ function renderHeaderFooter() {
         <a href="about-work.html" data-i18n="nav_about">About</a>
         <a href="gallery.html" data-i18n="nav_gallery">Gallery</a>
         <a href="donate.html" data-i18n="nav_donate">Donate</a>
-        <a href="visit-volunteer.html" data-i18n="nav_visit">Visit / Volunteer</a>
+        <a href="visit.html" data-i18n="nav_visit">Visit</a>
         <a href="contact.html" data-i18n="nav_contact">Contact</a>
         <a href="legal.html" data-i18n="nav_legal">Legal</a>
       </div>
