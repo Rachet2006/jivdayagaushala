@@ -452,8 +452,7 @@ body.nav-open {
   height: 2px; background: #fff;     /* underline stays visible on green */
 }
 
-/* Language switch on green */
-.lang-switch button { color: #fff; }
+.lang-switch button { color: #000000; }
 
 /* Mobile drawer should remain white for readability */
 @media (max-width: 768px){
