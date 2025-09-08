@@ -415,3 +415,52 @@ body.nav-open {
   }
 }
 
+/* Sticky header bar */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--clr-primary);   /* was: backdrop blur */
+  backdrop-filter: none;
+}
+
+/* Top bar */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+  padding: .8rem var(--space-4);
+  background: var(--clr-primary);   /* was: rgba(255,255,255,.86) */
+  border-bottom: 1px solid color-mix(in srgb, var(--clr-primary) 70%, #0000);
+  position: relative;
+}
+
+/* Links styling (contrast on green) */
+.nav a {
+  color: #fff;                       /* was: var(--clr-text) */
+  text-decoration: none;
+  padding: .6rem .8rem;
+  border-radius: 8px;
+  position: relative;
+}
+.nav a:hover::after,
+.nav a[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  left: .8rem; right: .8rem; bottom: 6px;
+  height: 2px; background: #fff;     /* underline stays visible on green */
+}
+
+/* Language switch on green */
+.lang-switch button { color: #fff; }
+
+/* Mobile drawer should remain white for readability */
+@media (max-width: 768px){
+  .nav-links {
+    background: var(--clr-surface);  /* keep drawer light */
+    border-top: 1px solid var(--clr-border);
+    border-bottom: 1px solid var(--clr-border);
+  }
+}
+.nav .logo { color:#fff; }  /* white logo on green */
