@@ -390,3 +390,28 @@ body.nav-open {
   #primary-links{ display: none !important; }
 }
 
+/* --- Logo visibility & layering --- */
+.nav .logo{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  z-index: 900;                 /* sit above mobile drawers/lang switch */
+  color: var(--clr-primary);    /* if SVG uses currentColor, it will tint */
+}
+
+.nav .logo img{
+  width: 64px;                  /* explicit size */
+  height: 64px;
+}
+
+/* Optional: give the logo a subtle white chip so it’s visible even if the SVG is white */
+@media (min-width: 769px){
+  .nav .logo{
+    background: #fff;
+    border-radius: 999px;
+    padding: 6px;
+    box-shadow: var(--shadow-1);
+  }
+}
+
