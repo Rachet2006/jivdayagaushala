@@ -1,3 +1,5 @@
+const PAGE_TS = Date.now();
+
 /* ---------- i18n dictionary ---------- */
 const i18n = {
   en: {
@@ -579,33 +581,25 @@ function copy(sel) {
   navigator.clipboard.writeText(text).then(() => showToast(i18n[currentLang].copied));
 }
 
-/* ---------- forms ---------- */
+/* ---------- forms (keep only Volunteer on localStorage) ---------- */
 function setupForms() {
-  ["donation-form", "volunteer-form", "contact-form"].forEach((id) => {
-    const form = document.getElementById(id);
-    if (!form) return;
+  const id = "volunteer-form";
+  const form = document.getElementById(id);
+  if (!form) return;
 
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(form).entries());
+    const storeKey = "volunteerSubmissions";
+    const arr = JSON.parse(localStorage.getItem(storeKey) || "[]");
+    arr.push({ date: new Date().toISOString(), data });
+    localStorage.setItem(storeKey, JSON.stringify(arr));
 
-      const data = Object.fromEntries(new FormData(form).entries());
-      const storeKey = id.replace("-form", "") + "Submissions";
-      const arr = JSON.parse(localStorage.getItem(storeKey) || "[]");
-      arr.push({ date: new Date().toISOString(), data });
-      localStorage.setItem(storeKey, JSON.stringify(arr));
-
-      const msgKey =
-        id === "donation-form"
-          ? "donate_success"
-          : id === "volunteer-form"
-          ? "volunteer_success"
-          : "contact_success";
-
-      showToast(i18n[currentLang][msgKey] || "Saved.");
-      form.reset();
-    });
+    showToast(i18n[currentLang].volunteer_success || "Saved.");
+    form.reset();
   });
 }
+
 
 /* ---------- toast ---------- */
 function showToast(msg) {
@@ -626,3 +620,73 @@ function updateYear() {
   const el = document.getElementById("year");
   if (el) el.textContent = new Date().getFullYear();
 }
+
+const MAKE_WEBHOOK_URL = '/api/submit';  // Vercel serverless proxy
+const FORM_SECRET = 'shrigaushalabhinmal2025';                 // also add a filter for this in Make
+
+
+async function postToMake(payload) {
+  const res = await fetch(MAKE_WEBHOOK_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  });
+  // Make webhooks return 200/202 with no JSON by default
+  if (!res.ok) throw new Error('Network error');
+  return true;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const cf = document.getElementById('contactForm');
+  if (cf) {
+    cf.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const status = document.getElementById('contactStatus');
+      status.textContent = 'Sending...';
+      try {
+        await postToMake({
+          secret: FORM_SECRET,
+          formType: 'contact',
+          name:  document.getElementById('c_name').value.trim(),
+          email: document.getElementById('c_email').value.trim(),
+          phone: document.getElementById('c_phone').value.trim(),
+          message: document.getElementById('c_message').value.trim(),
+          hp:    document.getElementById('c_hp').value.trim(), // honeypot
+          origin: window.location.origin,
+        });
+        status.textContent = 'Thanks! We will contact you soon.';
+        cf.reset();
+      } catch (err) {
+        status.textContent = 'Failed to send. Please try again.';
+      }
+    });
+  }
+
+  const df = document.getElementById('donateForm');
+  if (df) {
+    df.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const status = document.getElementById('donateStatus');
+      status.textContent = 'Saving...';
+      try {
+        await postToMake({
+          secret: FORM_SECRET,
+          formType: 'donation',
+          name:   document.getElementById('d_name').value.trim(),
+          email:  document.getElementById('d_email').value.trim(),
+          amount: document.getElementById('d_amount').value.trim(),
+          purpose:document.getElementById('d_purpose').value.trim(),
+          notes:  document.getElementById('d_notes').value.trim(),
+          hp:     document.getElementById('d_hp').value.trim(),
+          origin: window.location.origin,
+        });
+        status.textContent = 'Thank you! We’ve recorded your pledge.';
+        df.reset();
+      } catch (err) {
+        status.textContent = 'Failed to save. Please try again.';
+      }
+    });
+  }
+});
+
+

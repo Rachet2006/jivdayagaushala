@@ -56,27 +56,36 @@
         </div>
 
         <h2 data-i18n="contact_form_title">Contact Form</h2>
-        <form id="contact-form" class="form two-col" novalidate>
-          <div class="input">
-            <label for="c-name" data-i18n="donate_name">Full Name</label>
-            <input id="c-name" name="name" autocomplete="name" required />
-          </div>
-          <div class="input">
-            <label for="c-email" data-i18n="donate_email">Email</label>
-            <input id="c-email" type="email" name="email" autocomplete="email" required />
-          </div>
-          <div class="input">
-            <label for="c-phone" data-i18n="donate_phone">Phone</label>
-            <input id="c-phone" name="phone" inputmode="tel" autocomplete="tel" required />
-            <span class="help" data-i18n="help_phone">Include country code if outside India.</span>
-          </div>
-          <div class="input" style="grid-column: 1 / -1;">
-            <label for="c-msg" data-i18n="form_message">Message</label>
-            <textarea id="c-msg" name="message" rows="5"></textarea>
-          </div>
-          <div style="grid-column: 1 / -1; display:flex; gap:var(--space-3); justify-content:center;">
-            <button type="submit" class="btn btn-primary" data-i18n="donate_submit">Submit</button>
-            <button type="reset" class="btn btn-outline">Clear</button>
+        <form id="contactForm" class="form-card" novalidate>
+          <!-- Optional grid wrapper if your old CSS had it -->
+          <div class="form-grid">
+
+            <!-- Honeypot -->
+            <input id="c_hp" name="hp" type="text" tabindex="-1" autocomplete="off"
+                  aria-hidden="true" style="position:absolute; left:-9999px; height:0; width:0; opacity:0;">
+
+            <div class="field">
+              <label for="c_name" data-i18n="donate_name">Name</label>
+              <input id="c_name" name="name" type="text" required autocomplete="name" />
+            </div>
+
+            <div class="field">
+              <label for="c_email" data-i18n="donate_email">Email</label>
+              <input id="c_email" name="email" type="email" required autocomplete="email" />
+            </div>
+
+            <div class="field">
+              <label for="c_phone">Phone</label>
+              <input id="c_phone" name="phone" type="tel" autocomplete="tel" />
+            </div>
+
+            <div class="field">
+              <label for="c_message" data-i18n="form_message">Message</label>
+              <textarea id="c_message" name="message" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="btn" data-i18n="donate_submit">Submit</button>
+            <div id="contactStatus" class="form-status" role="status" aria-live="polite"></div>
           </div>
         </form>
       </div>

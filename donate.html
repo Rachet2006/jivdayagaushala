@@ -72,42 +72,40 @@
   <section class="section">
     <div class="container">
       <h2 data-i18n="donate_form_title">Donation Intent Form</h2>
-      <form id="donation-form" class="form">
-        <div class="input">
-          <label for="d-name" data-i18n="donate_name">Name</label>
-          <input id="d-name" name="name" required>
+      <form id="donateForm" class="form-card" novalidate>
+        <div class="form-grid">
+          <!-- Honeypot -->
+          <input id="d_hp" name="hp" type="text" tabindex="-1" autocomplete="off"
+                aria-hidden="true" style="position:absolute; left:-9999px; height:0; width:0; opacity:0;">
+
+          <div class="field">
+            <label for="d_name" data-i18n="donate_name">Name</label>
+            <input id="d_name" name="name" type="text" required autocomplete="name" />
+          </div>
+
+          <div class="field">
+            <label for="d_email" data-i18n="donate_email">Email</label>
+            <input id="d_email" name="email" type="email" required autocomplete="email" />
+          </div>
+
+          <div class="field">
+            <label for="d_amount" data-i18n="donate_amount">Amount (₹)</label>
+            <input id="d_amount" name="amount" type="number" min="1" step="1" required inputmode="numeric" />
+          </div>
+
+          <div class="field">
+            <label for="d_purpose" data-i18n="donate_purpose">Purpose</label>
+            <input id="d_purpose" name="purpose" type="text" placeholder="General / Medical / Feed / Tree..." />
+          </div>
+
+          <div class="field">
+            <label for="d_notes">Notes (Address / PAN for 80G)</label>
+            <textarea id="d_notes" name="notes" rows="3"></textarea>
+          </div>
+
+          <button type="submit" class="btn" data-i18n="donate_submit">Submit</button>
+          <div id="donateStatus" class="form-status" role="status" aria-live="polite"></div>
         </div>
-        <div class="input">
-          <label for="d-email" data-i18n="donate_email">Email</label>
-          <input id="d-email" type="email" name="email" required>
-        </div>
-        <div class="input">
-          <label for="d-phone" data-i18n="donate_phone">Phone</label>
-          <input id="d-phone" name="phone" required>
-        </div>
-        <div class="input">
-          <label for="d-address" data-i18n="donate_address">Address</label>
-          <textarea id="d-address" name="address" required></textarea>
-        </div>
-        <div class="input">
-          <label for="d-pan" data-i18n="donate_pan">PAN (optional)</label>
-          <input id="d-pan" name="pan">
-        </div>
-        <div class="input">
-          <label for="d-amount" data-i18n="donate_amount">Amount (₹)</label>
-          <input id="d-amount" name="amount" type="number" min="1" required>
-        </div>
-        <div class="input">
-          <label for="d-purpose" data-i18n="donate_purpose">Purpose</label>
-          <select id="d-purpose" name="purpose">
-            <option data-i18n="donate_one_time">One-time</option>
-            <option data-i18n="donate_monthly">Monthly</option>
-            <option data-i18n="donate_feed">Feed for a Day</option>
-            <option data-i18n="donate_medical">Medical Care</option>
-            <option data-i18n="donate_tree">Plant a Tree</option>
-          </select>
-        </div>
-        <button type="submit" class="btn btn-primary" data-i18n="donate_submit">Submit</button>
       </form>
     </div>
   </section>
