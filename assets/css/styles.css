@@ -350,6 +350,7 @@ footer a { color:#fff; }
 body.nav-open {
   overflow: hidden;
 }
+
 /* ==== Desktop split-nav with dead-center logo ==== */
 @media (min-width: 769px){
   .nav{
@@ -362,7 +363,6 @@ body.nav-open {
 
   .menu-toggle{ display: none; }
 
-  /* show desktop groups */
   .nav-group{
     display: flex;
     gap: .5rem .75rem;
@@ -372,31 +372,21 @@ body.nav-open {
   .nav-left{ justify-self: start; }
   .nav-right{ justify-self: end; }
 
-  /* center logo for desktop */
   .nav .logo{
     position: static;
     transform: none;
     justify-self: center;
   }
   .nav .logo img{
-    max-height: 64px; /* tweak size as you like */
+    max-height: 64px;
     height: auto; width: auto;
   }
 
-  /* language switch at absolute right */
   .lang-switch{
     justify-self: end;
     margin-left: var(--space-3);
   }
 
-  /* hide the mobile drawer on desktop */
   #primary-links{ display: none !important; }
 }
 
-/* Hide desktop groups on phones; keep your existing mobile styles */
-@media (max-width: 768px){
-  .nav-group{ display: none; }
-
-  /* (your existing mobile rules already center the logo and place
-     hamburger left & lang-switch right — leave them as-is) */
-}
