@@ -441,11 +441,36 @@ function renderHeaderFooter() {
   const header = document.getElementById("site-header");
   if (header) {
    header.innerHTML = `
-    <nav class="nav container" aria-label="Primary">
-      <a href="index.html" class="logo" aria-label="Home">
-        <img src="assets/img/logo.svg" alt="Logo" width="40" height="40" />
-      </a>
+   <nav class="nav container" aria-label="Primary">
       <button class="menu-toggle" aria-label="Toggle menu" aria-controls="primary-links" aria-expanded="false">☰</button>
+    
+      <!-- DESKTOP: left group -->
+      <div class="nav-group nav-left">
+        <a href="index.html" data-i18n="nav_home">Home</a>
+        <a href="about-work.html" data-i18n="nav_about">About</a>
+        <a href="gallery.html" data-i18n="nav_gallery">Gallery</a>
+      </div>
+    
+      <!-- Center logo (desktop & mobile) -->
+      <a href="index.html" class="logo" aria-label="Home">
+        <img src="assets/img/logo.svg" alt="Logo" width="64" height="64" />
+      </a>
+    
+      <!-- DESKTOP: right group -->
+      <div class="nav-group nav-right">
+        <a href="donate.html" data-i18n="nav_donate">Donate</a>
+        <a href="visit-volunteer.html" data-i18n="nav_visit">Visit / Volunteer</a>
+        <a href="contact.html" data-i18n="nav_contact">Contact</a>
+        <a href="legal.html" data-i18n="nav_legal">Legal</a>
+      </div>
+    
+      <!-- Always on the absolute right -->
+      <div class="lang-switch" aria-label="Language">
+        <button class="lang-toggle" data-lang="en" data-i18n="lang_label_en">EN</button> |
+        <button class="lang-toggle" data-lang="hi" data-i18n="lang_label_hi">हिन्दी</button>
+      </div>
+    
+      <!-- MOBILE: the drawer that opens under the bar -->
       <div class="nav-links" id="primary-links">
         <a href="index.html" data-i18n="nav_home">Home</a>
         <a href="about-work.html" data-i18n="nav_about">About</a>
@@ -454,10 +479,6 @@ function renderHeaderFooter() {
         <a href="visit-volunteer.html" data-i18n="nav_visit">Visit / Volunteer</a>
         <a href="contact.html" data-i18n="nav_contact">Contact</a>
         <a href="legal.html" data-i18n="nav_legal">Legal</a>
-      </div>
-      <div class="lang-switch" aria-label="Language">
-        <button class="lang-toggle" data-lang="en" data-i18n="lang_label_en">EN</button> |
-        <button class="lang-toggle" data-lang="hi" data-i18n="lang_label_hi">हिन्दी</button>
       </div>
     </nav>
   `;
@@ -493,12 +514,11 @@ function renderHeaderFooter() {
 /* ---------- active nav ---------- */
 function setActiveNav() {
   const current = location.pathname.split("/").pop() || "index.html";
-  document.querySelectorAll(".nav a").forEach((a) => {
-    if (a.getAttribute("href") === current) {
-      a.setAttribute("aria-current", "page");
-    }
+  document.querySelectorAll(".nav .nav-links a, .nav .nav-group a").forEach((a) => {
+    a.toggleAttribute("aria-current", a.getAttribute("href") === current);
   });
 }
+
 
 /* ---------- language ---------- */
 function setLanguage(lang) {
