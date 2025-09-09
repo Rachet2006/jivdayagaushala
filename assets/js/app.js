@@ -453,6 +453,7 @@ function renderHeaderFooter() {
       <!-- Center logo (desktop & mobile) -->
       <a href="index.html" class="logo" aria-label="Home">
         <span class="logo-mark" aria-hidden="true"></span>
+        <img src="assets/img/logo.svg" alt="Logo">
         <span class="sr-only">Home</span>
       </a>
     
@@ -619,8 +620,6 @@ function updateYear() {
 }
 
 const MAKE_WEBHOOK_URL = '/api/submit';  // Vercel serverless proxy
-const FORM_SECRET = 'shrigaushalabhinmal2025';                 // also add a filter for this in Make
-
 
 async function postToMake(payload) {
   const res = await fetch(MAKE_WEBHOOK_URL, {
@@ -628,7 +627,7 @@ async function postToMake(payload) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload),
   });
-  // Make webhooks return 200/202 with no JSON by default
+  
   if (!res.ok) throw new Error('Network error');
   return true;
 }
